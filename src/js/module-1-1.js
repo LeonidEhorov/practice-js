@@ -77,9 +77,9 @@
 // Створи змінну lastLetter і присвой їй останню літеру рядка someString.
 // ```
 
-const someString = 'dfdfddf';
-const firstLetter = someString[0];
-const lastLetter = someString[someString.length - 1];
+// const someString = 'dfdfddf';
+// const firstLetter = someString[0];
+// const lastLetter = someString[someString.length - 1];
 
 // ```
 // Створи дві змінних str1 та str2.
@@ -87,6 +87,11 @@ const lastLetter = someString[someString.length - 1];
 // Створи третю змінну де обєднай попередні літери
 // Приклад: для рядків "HELLO" та "WORLD" результатом буде рядок "OD"
 // ```
+
+// const str1 = 'HELLO'['HELLO'.length - 1];
+// const str2 = 'WORLD'['WORLD'.length - 1];
+// const result = str1 + str2;
+// console.log(result);
 
 // ---
 
@@ -103,6 +108,9 @@ const lastLetter = someString[someString.length - 1];
 // для числа 512 = 512 * 5^3 = 64000;
 
 // ```
+// const userValue = 3;
+// const x = userValue * 5 ** userValue;
+// console.log(x);
 
 // ---
 
@@ -111,10 +119,10 @@ const lastLetter = someString[someString.length - 1];
 
 // const apples = 47;
 // const grapes = 135;
-// const total = ;
-// console.log(total)
-// const diff = ;
-// console.log(diff)
+// const total = apples + grapes;
+// console.log(total);
+// const diff = apples > grapes;
+// console.log(diff);
 
 // ```
 
@@ -124,7 +132,7 @@ const lastLetter = someString[someString.length - 1];
 // Замінити вираз перевизначення комбінованим оператором `+=`.
 
 // let students = 100;
-// students = students + 50;
+// students += 50;
 // console.log(students);
 // ```
 
@@ -136,6 +144,9 @@ const lastLetter = someString[someString.length - 1];
 
 // const result = 108 + 223 - 2 * 5;
 // console.log(result);
+// 1.*;
+// 2.+;
+// 3.-;
 // ```
 
 // ---
@@ -144,9 +155,9 @@ const lastLetter = someString[someString.length - 1];
 // Склади фразу за допомогою шаблонних рядків `A has B bots in stock`, де A, B -
 // змінні вставлені у рядок.
 
-// const companyName = "Cyberdyne Systems";
+// const companyName = 'Cyberdyne Systems';
 // const repairBots = 150;
 // const defenceBots = 50;
-// const message = ``;
+// const message = `${companyName}has ${repairBots + defenceBots} bots in stock'`;
 // console.log(message); // "Cyberdyne Systems has 200 bots in stock"
 // ```
