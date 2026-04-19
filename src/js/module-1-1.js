@@ -121,7 +121,7 @@
 // const grapes = 135;
 // const total = apples + grapes;
 // console.log(total);
-// const diff = apples > grapes;
+// const diff = apples - grapes;
 // console.log(diff);
 
 // ```
