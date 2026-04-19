@@ -71,16 +71,18 @@
 // Напишіть функцію, яка приймає один параметр year. Якщо рік ділиться на 4 і не ділиться на 100, або ділиться на 400, поверніть "Високосний рік", в іншому випадку - "Звичайний рік".
 // ```
 function task8(year) {}
+console.log(task26('hari', 'dgon'));
 // ```
 // Задача-9
 // Напишіть функцію, яка приймає два параметри: hasInvitation (булевий) і isFriend (булевий). Якщо у вас є запрошення або ви друг, поверніть "Ви запрошені", в іншому випадку поверніть "Вхід заборонено".
 // ```
 function task9(hasInvitation, isFriend) {
-  if (hasInvitation === isFriend) {
+  if (hasInvitation && isFriend) {
     return 'Ви запрошені';
   }
   return 'Вхід заборонено';
 }
+
 // ```
 // Задача-10
 // Напишіть функцію, яка приймає вік особи (age). Якщо вік менший за 12, поверніть "Дитина", якщо від 12 до 18, поверніть "Підліток", якщо від 18 до 60, поверніть "Дорослий", більше 60 - "Пенсіонер".
@@ -101,13 +103,14 @@ function task10(age) {
 // ```
 
 function task11(isLoggedIn, hasAdminRights) {
-  if (isLoggedIn === hasAdminRights) {
+  if (isLoggedIn && hasAdminRights) {
     return 'Адмін-сторінка';
-  } else if (isLoggedIn !== hasAdminRights) {
+  } else if (isLoggedIn || !hasAdminRights) {
     return 'Користувач';
   }
   return 'Гість';
 }
+
 // ```
 // Задача-12
 // Напишіть функцію, яка приймає один параметр speed. Якщо швидкість менша за 60 км/год, поверніть "Безпечно", якщо від 60 до 100 км/год, поверніть "Увага", якщо більше 100 км/год, поверніть "Небезпечно".
@@ -244,7 +247,7 @@ function task23(temperature, isRaining) {
 // Напишіть функцію, яка приймає два параметри: hasCar (булевий) та hasLicense (булевий). Якщо у вас є автомобіль та водійські права, поверніть "Можете водити машину", якщо ні, поверніть "Водити заборонено".
 // ```
 function task24(hasCar, hasLicense) {
-  return !hasCar === !hasLicense ? 'Можете водити машину' : 'Водити заборонено';
+  return hasCar && !hasLicense ? 'Можете водити машину' : 'Водити заборонено';
 }
 
 // ```
@@ -265,7 +268,7 @@ function task25(age, hasParentConsent) {
 // ```
 
 function task26(isVegetarian, containsMeat) {
-  return isVegetarian !== containsMeat ? 'Не можна їсти' : 'Можна їсти';
+  return isVegetarian && containsMeat ? 'Не можна їсти' : 'Можна їсти';
 }
 
 // ```
