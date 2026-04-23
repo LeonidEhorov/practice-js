@@ -70,14 +70,19 @@
 // Задача-8
 // Напишіть функцію, яка приймає один параметр year. Якщо рік ділиться на 4 і не ділиться на 100, або ділиться на 400, поверніть "Високосний рік", в іншому випадку - "Звичайний рік".
 // ```
-function task8(year) {}
+function task8(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return 'Високосний рік';
+  }
+  return 'Звичайний рік';
+}
 console.log(task26('hari', 'dgon'));
 // ```
 // Задача-9
 // Напишіть функцію, яка приймає два параметри: hasInvitation (булевий) і isFriend (булевий). Якщо у вас є запрошення або ви друг, поверніть "Ви запрошені", в іншому випадку поверніть "Вхід заборонено".
 // ```
 function task9(hasInvitation, isFriend) {
-  if (hasInvitation && isFriend) {
+  if (hasInvitation || isFriend) {
     return 'Ви запрошені';
   }
   return 'Вхід заборонено';
@@ -102,14 +107,14 @@ function task10(age) {
 // Напишіть функцію, яка приймає два параметри: isLoggedIn (булевий) та hasAdminRights (булевий). Якщо ви увійшли в систему і маєте права адміністратора, поверніть "Адмін-сторінка", якщо увійшли, але не є адміністратором, поверніть "Користувач", в іншому випадку - "Гість".
 // ```
 
-function task11(isLoggedIn, hasAdminRights) {
-  if (isLoggedIn && hasAdminRights) {
-    return 'Адмін-сторінка';
-  } else if (isLoggedIn || !hasAdminRights) {
-    return 'Користувач';
-  }
-  return 'Гість';
-}
+// function task11(isLoggedIn, hasAdminRights) {
+//   if (isLoggedIn && hasAdminRights) {
+//     return 'Адмін-сторінка';
+//   } else if (isLoggedIn && !hasAdminRights) {
+//     return 'Користувач';
+//   }
+//   return 'Гість';
+// }
 
 // ```
 // Задача-12
@@ -118,7 +123,7 @@ function task11(isLoggedIn, hasAdminRights) {
 function task12(speed) {
   if (speed < 60) {
     return 'Безпечно';
-  } else if (speed < 60 || speed > 100) {
+  } else if (speed > 60 || speed < 100) {
     return 'Увага';
   }
   return 'Небезпечно';
@@ -129,7 +134,7 @@ function task12(speed) {
 // ```
 
 function task13(time, isWeekend) {
-  if (time < 12 || !isWeekend) {
+  if (time < 12 && !isWeekend) {
     return 'Ранок буднього дня';
   } else if (time > 12 || time < 18 || isWeekend) {
     return 'День вихідного дня';
