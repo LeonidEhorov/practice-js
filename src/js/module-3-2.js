@@ -115,13 +115,12 @@
 //    об'єднаними в один рядок, розділений комами.
 
 // function task14() {
-//   let arr = [];
+//   let total = '';
 //   for (let i = 0; i < arguments.length; i++) {
-//     console.log(arguments[i]);
-//     // const result = [].concat(String(arguments[i]).split('').join(','));
-//     // arr.push(result);
+//     total += arguments[i];
 //   }
-//   return arr;
+//   const result = total.split('');
+//   return result;
 // }
 
 // console.log(task14(12, 23, 'dfgsfd'));
@@ -150,41 +149,41 @@
 // 1. Напиши функцію яка приймає довільну кількість рядочків і повертає той рядок
 //    що є найдовшим
 
-// function task17() {
-//   let total = '';
-//   for (let i = 0; i < arguments.length; i++) {
-//     if (arguments[i].length > 0) {
-//       total = arguments[i];
-//     }
-//   }
-//   return total;
-// }
+function task17() {
+  let total = '';
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i].length > total.length) {
+      total = arguments[i];
+    }
+  }
+  return total;
+}
 
-// console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsadsfa9'));
+console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsads'));
 
 // 1. Напиши функцію яка приймає довільну кількість рядочків і обєднує їх в один
 //    цілий рядок.
 
-function task18() {
-  let total = '';
-  for (let i = 0; i < arguments.length; i++) {
-    console.log(arguments[i]);
-  }
-  return total;
-}
-console.log(task18('gsfgfs', 'agasgsgasdgs', 'sgfdfdsadsfa9'));
+// function task18() {
+//   let total = '';
+//   for (let i = 0; i < arguments.length; i++) {
+//     total += arguments[i];
+//   }
+//   return total;
+// }
+// console.log(task18('gsfgfs', 'agasgsgasdgs', 'sgfdfdsadsfa9'));
 // 1. Напиши функцію яка приймає два числа. Якщо одне з чисел дорівнює нуль то
 //    повернути null, в іншому випадку повернути добуток цих двох чисел.
 
-function task19() {
-  let to = 1;
-  for (const el of arguments) {
-    if (el === 0) {
-      return null;
-    }
-    to *= el;
-  }
-  return to;
-}
+// function task19() {
+//   let to = 1;
+//   for (const el of arguments) {
+//     if (el === 0) {
+//       return null;
+//     }
+//     to *= el;
+//   }
+//   return to;
+// }
 
-console.log(task19(10, 23));
+// console.log(task19(10, 23));
