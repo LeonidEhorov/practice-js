@@ -107,7 +107,7 @@
 
 // function task13() {
 //   for (let i = 0; i < arguments.length; i++) {
-//     return typeof arguments[i] === 'number' ? true : false;
+//     return typeof arguments[i] === 'number';
 //   }
 // }
 // console.log(task13(12, 23));
@@ -187,3 +187,232 @@ console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsads'));
 // }
 
 // console.log(task19(10, 23));
+
+// Задача-51
+// Напишіть функцію, яка приймає рядок username. Якщо username не пустий, містить тільки малі літери (перевір через toLowerCase) і довжина від 4 до 12 символів — поверни "Валідний username", інакше — "Невалідний username".
+
+function task1(username) {
+  const str = username.toLowerCase();
+  if (username !== '' && str && username.length > 4 && username.length < 12) {
+    return 'Валідний username';
+  }
+  return 'Невалідний username';
+}
+console.log(task1('Hello'));
+// Задача-52
+// Напишіть функцію, яка приймає рядок password. Якщо пароль містить хоча б одну цифру (includes), хоча б одну велику літеру і довжина більше 8 — поверни "Сильний пароль", інакше — "Слабкий пароль".
+
+function task2(password) {
+  for (const el of password) {
+    const result = password.includes(Number(el));
+    const str = el !== el.toUpperCase();
+    const strLenght = password.length;
+
+    if (typeof result && str && strLenght > 8) {
+      return 'Сильний пароль';
+    }
+    return 'Слабкий пароль';
+  }
+}
+console.log(task2('hrHo23klk'));
+// Задача-53
+// Напишіть функцію, яка приймає число number. Якщо число кратне 3 і 5, і його квадрат більше 100 — поверни "Потужне число", якщо тільки кратне 3 або 5 — "Частково підходить", інакше — "Не підходить".
+
+function task3(number) {}
+console.log(task3('hrHo23klk'));
+
+// Задача-54
+// Напишіть функцію, яка приймає рядок text. Якщо рядок містить слово "error" (без урахування регістру) — поверни "Є помилка", якщо містить "warning" — "Є попередження", інакше — "Чистий текст".
+// function task4(text) {
+//   if (text === 'error') {
+//     return 'Є помилка';
+//   } else if (text === 'warning') {
+//     return 'Є попередження';
+//   }
+//   return 'Чистий текст';
+// }
+// console.log(task4('warning'));
+// Задача-55
+// Напишіть функцію, яка приймає число price. Якщо price > 1000, зменш його на 10%, якщо > 500 — на 5%, і поверни фінальну ціну. Якщо менше або дорівнює 500 — поверни без змін.
+
+// function task5(price) {
+//   if (price > 1000) {
+//     price /= 10;
+//   } else if (price > 500) {
+//     price /= 5;
+//   } else if (price <= 500) {
+//   }
+
+//   return price;
+// }
+
+// console.log(task5(1500));
+// // Задача-56
+// Напишіть функцію, яка приймає рядок email. Перевір чи email містить "@" і "." після "@". Якщо так — "Валідний", інакше — "Невалідний".
+
+// function task6(email) {
+//   const gmail = email.includes('@');
+//   const x = email.indexOf('.');
+//   const result = email.slice(x);
+//   const strSlice = result.includes('@');
+//   if (gmail && strSlice) {
+//     return 'Валідний';
+//   }
+//   return 'Невалідний';
+// }
+// console.log(task6('hdssjf@gmail.com'));
+// Задача-57
+// Напишіть функцію, яка приймає число number. Якщо число позитивне і його квадрат парний — поверни "Позитивне парне", якщо негативне і його куб менше -100 — "Сильне негативне", інакше — "Інше".
+
+function task7(number) {}
+console.log(task7(1500));
+
+// Задача-58
+// Напишіть функцію, яка приймає рядок word. Якщо слово однаково читається зліва направо і справа наліво (паліндром) — поверни "Паліндром", інакше — "Не паліндром".
+
+// function task8(word) {
+//   const str = word.split('').reverse().join('');
+//   if (str === word) {
+//     return 'Паліндром';
+//   }
+//   return 'Не паліндром';
+// }
+
+// console.log(task8('racecar'));
+
+// Задача-59
+// Напишіть функцію, яка приймає два числа a і b. Поверни більше число, але якщо вони рівні — поверни їх суму.
+
+// function task9(a, b) {
+//   return a >= b ? a : b;
+//   // let total = 0;
+//   // if (a >= b) {
+//   //   total = a + b;
+//   // }
+//   // return total;
+// }
+// // console.log(task9(23, 23));
+// console.log(task9(23, 25));
+// Задача-60
+// Напишіть функцію, яка приймає рядок text. Якщо довжина рядка більше 20 — обріж його до 20 символів і додай "...", інакше — поверни як є.
+
+// function task10(text) {
+//   console.log(text.length);
+
+//   if (text.length > 20) {
+//     const result = text.slice(0, 20);
+//     return `${result}...`;
+//   }
+//   return text;
+// }
+// console.log(task10('racecarfgjsllkfdjgojhio'));
+// Задача-61
+// Напишіть функцію, яка приймає рядок str. Якщо рядок починається з великої літери і закінчується крапкою — "Правильне речення", інакше — "Неправильне".
+
+// function task11(str) {
+//   const strtoUpperCase = str[0];
+//   const strIncludes = str.includes('.');
+//   if (strtoUpperCase === str[0] && strIncludes) {
+//     return 'Правильне речення';
+//   }
+//   return 'Неправильне';
+// }
+// console.log(task11('Hello.'));
+// Задача-62
+// Напишіть функцію, яка приймає число number. Якщо число більше 0 і менше 100, поверни суму його цифр. Якщо більше 100 — поверни квадрат. Якщо менше 0 — поверни модуль.
+// let total = 0;
+// function task12(number) {
+//   for (let i = 0; i < number; i++) {
+//     if (number > 0 && number < 100) {
+//       total += i;
+//     } else if (number > 100) {
+//       total = i ** 2;
+//     } else if (number < 0) {
+//       return number;
+//     }
+//   }
+//   return total;
+// }
+
+// console.log(task12(120));
+// Задача-63
+// Напишіть функцію, яка приймає рядок text. Замінюй всі пробіли на "-" і поверни результат. Якщо рядок вже містить "-", нічого не змінюй.
+
+// function task13(text) {
+//   const result = text.split(' ').join('-');
+//   const textIncludes = result.includes('-');
+//   if (result) {
+//     return result;
+//   } else if (textIncludes) {
+//     return text;
+//   }
+// }
+// console.log(task13('Hello Hello Hello Hello Hello Hello Hello'));
+// // Задача-64
+// Напишіть функцію, яка приймає число number. Якщо число парне — поверни його половину, якщо непарне — помнож на 3 і додай 1.
+
+// function task14(number) {
+//   let total = 1;
+//   total = number / 2;
+//   total = number / 3;
+//   if (total) {
+//     return total;
+//   } else if (total) {
+//     return (total *= 3);
+//   }
+//   return (total += 1);
+// }
+// console.log(task14(20));
+// Задача-65
+// Напишіть функцію, яка приймає рядок name. Якщо ім’я починається з "A" або "a" і довжина більше 5 — поверни "Спеціальне ім’я", інакше — "Звичайне ім’я".
+
+// function task15(name) {
+//   if (name[0] === 'A' || (name[0] === 'a' && name.length > 5)) {
+//     return 'Спеціальне ім’я';
+//   }
+//   return 'Звичайне ім’я';
+// }
+// console.log(task15('Antons'));
+
+// Задача-66
+// Напишіть функцію, яка приймає число number. Якщо число кратне 2 і 3 — поверни їх добуток (2*3), якщо тільки 2 — 2, якщо тільки 3 — 3, інакше — 0.
+
+function task16(number) {}
+console.log(task16(12));
+// Задача-67
+// Напишіть функцію, яка приймає рядок text. Якщо текст повністю у верхньому регістрі — переведи його в нижній, якщо в нижньому — у верхній.
+// function task17(text) {
+//   if (text.toUpperCase()) {
+//     return text.toLowerCase();
+//   }
+//   return text.toUpperCase();
+// }
+// console.log(task17('ANTON'));
+// Задача-68
+// Напишіть функцію, яка приймає число number. Поверни "Fizz", "Buzz", "FizzBuzz" або число, але додай умову: якщо число більше 100 — поверни "Занадто велике".
+function task18(number) {}
+
+console.log(task18(150));
+// Задача-69
+// Напишіть функцію, яка приймає рядок text. Якщо текст містить більше 3 голосних букв — "Багато голосних", інакше — "Мало голосних".
+
+// Задача-70
+// Напишіть функцію, яка приймає рядок text. Видали всі цифри з рядка і поверни результат. Якщо цифр немає — поверни без змін.
+
+function task20(text) {
+  for (let i = 0; i < text.length; i++) {
+    const x = Number(text[i]);
+    const resalt = text.indexOf(x);
+    const a = text.slice(0, 5);
+    const f = text.slice(6, 8);
+    const y = text.slice(9);
+    const foo = [].concat(a, f, y).join('');
+
+    if (typeof x === 'number') {
+      return foo;
+    }
+    return text;
+  }
+}
+
+console.log(task20('hello1hf5dd'));
