@@ -191,70 +191,96 @@ console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsads'));
 // Задача-51
 // Напишіть функцію, яка приймає рядок username. Якщо username не пустий, містить тільки малі літери (перевір через toLowerCase) і довжина від 4 до 12 символів — поверни "Валідний username", інакше — "Невалідний username".
 
-function task1(username) {
-  const str = username.toLowerCase();
-  if (username !== '' && str && username.length > 4 && username.length < 12) {
-    return 'Валідний username';
-  }
-  return 'Невалідний username';
-}
-console.log(task1('Hello'));
+// function task1(username) {
+//   const str = username.toLowerCase();
+//   if (
+//     username !== '' &&
+//     str === username &&
+//     username.length > 4 &&
+//     username.length < 12
+//   ) {
+//     return 'Валідний username';
+//   }
+//   return 'Невалідний username';
+// }
+// console.log(task1('Hello'));
 // Задача-52
 // Напишіть функцію, яка приймає рядок password. Якщо пароль містить хоча б одну цифру (includes), хоча б одну велику літеру і довжина більше 8 — поверни "Сильний пароль", інакше — "Слабкий пароль".
 
 function task2(password) {
-  for (const el of password) {
-    const result = password.includes(Number(el));
-    const str = el !== el.toUpperCase();
-    const strLenght = password.length;
+  let hasNumber = false;
+  let hasUppercase = false;
+  let isValidLenght = password.length > 8;
 
-    if (typeof result && str && strLenght > 8) {
-      return 'Сильний пароль';
+  for (const el of password) {
+    if (Number(el)) {
+      hasNumber = true;
     }
-    return 'Слабкий пароль';
+    if (el === el.toUpperCase()) {
+      hasUppercase = true;
+    }
   }
+  if (isValidLenght && hasNumber && hasNumber) {
+    return 'Сильний пароль';
+  }
+  return 'Слабкий пароль';
 }
-console.log(task2('hrHo23klk'));
+console.log(task2('HroH23klk'));
 // Задача-53
 // Напишіть функцію, яка приймає число number. Якщо число кратне 3 і 5, і його квадрат більше 100 — поверни "Потужне число", якщо тільки кратне 3 або 5 — "Частково підходить", інакше — "Не підходить".
 
-function task3(number) {}
-console.log(task3('hrHo23klk'));
+// function task3(number) {
+//   const square = number ** 2;
+//   if (number % 3 === 0 && number % 5 === 0 && square > 100) {
+//     return 'Потужне число';
+//   } else if (number % 3 === 0 || number % 5 === 0) {
+//     return 'Частково підходить';
+//   }
+//   return 'Не підходить';
+// }
+// console.log(task3(21));
 
 // Задача-54
 // Напишіть функцію, яка приймає рядок text. Якщо рядок містить слово "error" (без урахування регістру) — поверни "Є помилка", якщо містить "warning" — "Є попередження", інакше — "Чистий текст".
 // function task4(text) {
-//   if (text === 'error') {
+//   const foo = text.toLowerCase();
+
+//   if (foo.includes('error')) {
 //     return 'Є помилка';
-//   } else if (text === 'warning') {
+//   } else if (foo.includes('warning')) {
 //     return 'Є попередження';
 //   }
 //   return 'Чистий текст';
 // }
-// console.log(task4('warning'));
+// console.log(task4('hello'));
 // Задача-55
 // Напишіть функцію, яка приймає число price. Якщо price > 1000, зменш його на 10%, якщо > 500 — на 5%, і поверни фінальну ціну. Якщо менше або дорівнює 500 — поверни без змін.
 
 // function task5(price) {
 //   if (price > 1000) {
-//     price /= 10;
+//     const s = price * 0.1;
+//     price -= s;
 //   } else if (price > 500) {
-//     price /= 5;
-//   } else if (price <= 500) {
+//     const a = price * 0.05;
+//     price -= a;
 //   }
 
 //   return price;
 // }
 
-// console.log(task5(1500));
+// console.log(task5(600));
 // // Задача-56
 // Напишіть функцію, яка приймає рядок email. Перевір чи email містить "@" і "." після "@". Якщо так — "Валідний", інакше — "Невалідний".
 
 // function task6(email) {
 //   const gmail = email.includes('@');
-//   const x = email.indexOf('.');
+//   console.log(gmail);
+//   const x = email.indexOf('@');
+//   console.log(x);
 //   const result = email.slice(x);
-//   const strSlice = result.includes('@');
+//   console.log(result);
+//   const strSlice = result.includes('.');
+//   console.log();
 //   if (gmail && strSlice) {
 //     return 'Валідний';
 //   }
@@ -264,7 +290,16 @@ console.log(task3('hrHo23klk'));
 // Задача-57
 // Напишіть функцію, яка приймає число number. Якщо число позитивне і його квадрат парний — поверни "Позитивне парне", якщо негативне і його куб менше -100 — "Сильне негативне", інакше — "Інше".
 
-function task7(number) {}
+function task7(number) {
+  const square = number ** 2;
+  const res = number ** 3;
+  if (number > 0 && square % 2 === 0) {
+    return 'Позитивне парне';
+  } else if (number < 0 && res < -100) {
+    return 'Сильне негативне';
+  }
+  return 'Інше';
+}
 console.log(task7(1500));
 
 // Задача-58
@@ -284,15 +319,14 @@ console.log(task7(1500));
 // Напишіть функцію, яка приймає два числа a і b. Поверни більше число, але якщо вони рівні — поверни їх суму.
 
 // function task9(a, b) {
+//   if (a === b) {
+//     return a + b;
+//   }
+
 //   return a >= b ? a : b;
-//   // let total = 0;
-//   // if (a >= b) {
-//   //   total = a + b;
-//   // }
-//   // return total;
 // }
-// // console.log(task9(23, 23));
-// console.log(task9(23, 25));
+// console.log(task9(23, 23));
+// console.log(task9(28, 25));
 // Задача-60
 // Напишіть функцію, яка приймає рядок text. Якщо довжина рядка більше 20 — обріж його до 20 символів і додай "...", інакше — поверни як є.
 
@@ -311,8 +345,13 @@ console.log(task7(1500));
 
 // function task11(str) {
 //   const strtoUpperCase = str[0];
-//   const strIncludes = str.includes('.');
-//   if (strtoUpperCase === str[0] && strIncludes) {
+//   console.log(strtoUpperCase);
+
+//   const foo = str[str.length - 1];
+//   const strIncludes = foo.includes('.');
+//   console.log(str[str.length - 1]);
+//   // console.log(strIncludes);
+//   if (strtoUpperCase === str[0].toUpperCase() && strIncludes) {
 //     return 'Правильне речення';
 //   }
 //   return 'Неправильне';
@@ -322,29 +361,28 @@ console.log(task7(1500));
 // Напишіть функцію, яка приймає число number. Якщо число більше 0 і менше 100, поверни суму його цифр. Якщо більше 100 — поверни квадрат. Якщо менше 0 — поверни модуль.
 // let total = 0;
 // function task12(number) {
-//   for (let i = 0; i < number; i++) {
-//     if (number > 0 && number < 100) {
+//   if (number > 0 && number < 100) {
+//     for (let i = 0; i <= String(number).length; i++) {
 //       total += i;
-//     } else if (number > 100) {
-//       total = i ** 2;
-//     } else if (number < 0) {
-//       return number;
 //     }
+//     return total;
+//   } else if (number > 100) {
+//     return number ** 2;
+//   } else if (number < 0) {
+//     return Math.abs(number);
 //   }
-//   return total;
 // }
 
-// console.log(task12(120));
+// console.log(task12(-1));
 // Задача-63
 // Напишіть функцію, яка приймає рядок text. Замінюй всі пробіли на "-" і поверни результат. Якщо рядок вже містить "-", нічого не змінюй.
 
 // function task13(text) {
-//   const result = text.split(' ').join('-');
-//   const textIncludes = result.includes('-');
-//   if (result) {
-//     return result;
-//   } else if (textIncludes) {
+//   const textIncludes = text.includes('-');
+//   if (textIncludes) {
 //     return text;
+//   } else {
+//     return text.split(' ').join('-');
 //   }
 // }
 // console.log(task13('Hello Hello Hello Hello Hello Hello Hello'));
@@ -352,32 +390,39 @@ console.log(task7(1500));
 // Напишіть функцію, яка приймає число number. Якщо число парне — поверни його половину, якщо непарне — помнож на 3 і додай 1.
 
 // function task14(number) {
-//   let total = 1;
-//   total = number / 2;
-//   total = number / 3;
-//   if (total) {
-//     return total;
-//   } else if (total) {
-//     return (total *= 3);
-//   }
-//   return (total += 1);
+//   // if (number % 2 === 0) {
+//   //   return number / 2;
+//   // } else {
+//   //   return number * 3 + 1;
+//   // }
 // }
-// console.log(task14(20));
+// console.log(task14(3));
 // Задача-65
 // Напишіть функцію, яка приймає рядок name. Якщо ім’я починається з "A" або "a" і довжина більше 5 — поверни "Спеціальне ім’я", інакше — "Звичайне ім’я".
 
 // function task15(name) {
-//   if (name[0] === 'A' || (name[0] === 'a' && name.length > 5)) {
-//     return 'Спеціальне ім’я';
-//   }
-//   return 'Звичайне ім’я';
+
+// if(name[0].toUpperCase() === 'A')
+//   // if ((name[0] === 'A' || name[0] === 'a') && name.length > 5) {
+//   //   return 'Спеціальне ім’я';
+//   // }
+//   // return 'Звичайне ім’я';
 // }
 // console.log(task15('Antons'));
 
 // Задача-66
 // Напишіть функцію, яка приймає число number. Якщо число кратне 2 і 3 — поверни їх добуток (2*3), якщо тільки 2 — 2, якщо тільки 3 — 3, інакше — 0.
 
-function task16(number) {}
+// function task16(number) {
+//   if (number % 2 === 0 && number % 3 === 0) {
+//     return 2 * 3;
+//   } else if (number % 2 === 0) {
+//     return 2;
+//   } else if (number % 3 === 0) {
+//     return 3;
+//   }
+//   return 0;
+// }
 console.log(task16(12));
 // Задача-67
 // Напишіть функцію, яка приймає рядок text. Якщо текст повністю у верхньому регістрі — переведи його в нижній, якщо в нижньому — у верхній.
@@ -400,19 +445,30 @@ console.log(task18(150));
 // Напишіть функцію, яка приймає рядок text. Видали всі цифри з рядка і поверни результат. Якщо цифр немає — поверни без змін.
 
 function task20(text) {
-  for (let i = 0; i < text.length; i++) {
-    const x = Number(text[i]);
-    const resalt = text.indexOf(x);
-    const a = text.slice(0, 5);
-    const f = text.slice(6, 8);
-    const y = text.slice(9);
-    const foo = [].concat(a, f, y).join('');
+  // return text.replaceAll(/\d\/d/, '');
+  // for (let i = 0; i < text.length; i++) {
+  //   // const x = Number(text[i]);
+  //   // const resalt = text.indexOf(x);
+  //   // const a = text.slice(0, 5);
+  //   // const f = text.slice(6, 8);
+  //   // const y = text.slice(9);
+  //   // const foo = [].concat(a, f, y).join('');
+  //   // if (typeof x === 'number') {
+  //   //   return foo;
+  //   // }
+  //   // return text;
+  // }
 
-    if (typeof x === 'number') {
-      return foo;
+  let resalt = '';
+
+  for (let i = 0; i < text.length; i++) {
+    // console.log(Number(text[i]));
+    if (!Number(text[i])) {
+      // console.log(text[i]);
+      resalt += text[i];
     }
-    return text;
   }
+  return resalt;
 }
 
 console.log(task20('hello1hf5dd'));
