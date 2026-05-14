@@ -8,6 +8,20 @@
 // `[firstName] [lastName]`. Також додай метод `incrementAge`, який збільшує вік
 // на 1.
 
+// const objTasks = {
+//   firstName: 'Leonid',
+//   lastName: 'Volkov',
+//   age: 35,
+//   getFullName() {
+//     return this['firstName'] + ' ' + this['lastName'];
+//   },
+//   incrementAge() {
+//     return (this.age += 1);
+//   },
+// };
+// console.log(objTasks.getFullName());
+// console.log(objTasks.incrementAge());
+
 // ---
 
 // **2. Завдання:**
@@ -16,12 +30,48 @@
 // її до балансу, а також метод `withdraw`, який приймає суму і зменшує баланс,
 // якщо сума не перевищує наявний баланс. Метод має повертати новий баланс.
 
+// const objBank = {
+//   bankName: 'MonoBank',
+//   accountNumber: 4143,
+//   balance: 1000,
+
+//   deposit(sum) {
+//     return (this.balance += sum);
+//   },
+//   withdraw(sum) {
+//     if (sum >= this.balance) {
+//       const result = (this.balance -= sum);
+//       return result;
+//     }
+//     return this.balance;
+//   },
+// };
+
+// objBank.deposit(500);
+// objBank.withdraw(1200);
+// console.log(objBank.withdraw());
 // ---
 
 // **3. Завдання:**
 // Створи об'єкт з властивостями `width` (число), `height` (число). Додай метод
 // `calculateArea`, який повертає площу прямокутника, та метод
 // `calculatePerimeter`, який повертає периметр.
+
+// const objWidth = {
+//   width: 30,
+//   height: 80,
+//   calculateArea() {
+//     return this.width * this.height;
+//   },
+//   calculatePerimeter() {
+//     console.log(
+//       `Периметр прямокутника зі сторонами ${this.width} і ${this.height} дорівнює: ${this.calculateArea()}`,
+//     );
+//   },
+// };
+
+// console.log(objWidth.calculateArea());
+// console.log(objWidth.calculatePerimeter());
 
 // ---
 
@@ -30,6 +80,16 @@
 // (число). Додай метод `getInfo`, який повертає рядок у форматі:
 // `[name] працює на позиції [position] із зарплатою [salary]`.
 
+// const objName = {
+//   name: 'Kosta',
+//   position: 'Start',
+//   salary: 345,
+//   getInfo() {
+//     return `${this['name']} - ${this['position']} - ${this['salary']}`;
+//   },
+// };
+// console.log(objName.getInfo());
+
 // ---
 
 // **5. Завдання:**
@@ -37,6 +97,16 @@
 // `population` (число). Додай метод `getDetails`, який повертає рядок у форматі:
 // `Країна: [countryName], столиця: [capital], населення: [population]`.
 
+// const objCapital = {
+//   contryName: 'Ukraina',
+//   capital: 'Kiev',
+//   population: 45,
+
+//   getDetails() {
+//     return `Країна: ${this['contryName']}, столиця: ${this['capital']}, населення: ${this['population']}`;
+//   },
+// };
+// console.log(objCapital.getDetails());
 // ---
 
 // **6. Завдання:**
@@ -44,12 +114,36 @@
 // `pricePerItem` (число). Додай метод `calculateTotalPrice`, який повертає
 // загальну вартість, множачи `quantity` на `pricePerItem`.
 
+// const objName = {
+//   itemName: 'Kiev',
+//   quatity: 234,
+//   pricePerItem: 451,
+//   calculateTotalPrice() {
+//     return this.quatity * this.pricePerItem;
+//   },
+// };
+// console.log(objName.calculateTotalPrice());
+
 // ---
 
 // **7. Завдання:**
 // Створи об'єкт із властивостями `email` (рядок) та `password` (рядок). Додай
 // метод `checkLogin`, який приймає два аргументи (email і password) і повертає
 // `true`, якщо вони збігаються зі значеннями об'єкта.
+
+// const objEmail = {
+//     email:'sobaca@.email.com',
+//     password:'Hellow23World',
+
+//     checkLogin(str){
+//         if(this.email === str && this.password === str){
+//             return true;
+//         }
+//         return false;
+
+//     }
+
+// }
 
 // ---
 
@@ -59,6 +153,17 @@
 // переводить температуру з Фаренгейта в Цельсій, якщо `unit` дорівнює `"F"`, та
 // метод `convertToFahrenheit`, який робить зворотнє перетворення.
 
+// const objNumber = {
+//   temperture: 32,
+//   unit: 'C',
+//   convertToCelsius(str) {
+//     if (this.unit !== str) {
+//       return (this.temperture * 9) / 5;
+//     }
+//   },
+// };
+// console.log(objNumber.convertToCelsius());
+
 // ---
 
 // **9. Завдання:**
@@ -66,6 +171,16 @@
 // `fuelEfficiency` (число). Додай метод `calculateRange`, який приймає кількість
 // пального (число) і повертає відстань, яку можна подолати.
 
+// const objStr = {
+//   vehicleType: 'sedan',
+//   fuelType: 'disel;',
+//   fuelEfficieny: 40,
+//   calculateRange() {
+//     return `sedan - ${this.fuelEfficieny / this.fuelType.length}`;
+//   },
+// };
+
+// console.log(objStr.calculateRange());
 // ---
 
 // **10. Завдання:**
@@ -74,25 +189,65 @@
 // 1, та метод `getReport`, який повертає рядок у форматі:
 // `[studentName] має оцінку [grade] з предмету [subject]`.
 
-// ---
+// const objStydent = {
+//   studentName: 'Igor',
+//   grade: 3,
+//   sudject: 'Matemateka',
+
+//   upgradeGrade() {
+//     this.grade += 1;
+//   },
+//   getReport() {
+//     return `${this['studentName']} - ${this['grade']} bal, ${this['sudject']} `;
+//   },
+// };
+// console.log(objStydent.getReport());
+// // ---
 
 // **11. Завдання:**
 // Створи об'єкт із властивостями `movieTitle` (рядок), `director` (рядок) та
 // `duration` (число, у хвилинах). Додай метод `getMovieInfo`, який повертає опис
 // фільму у форматі: `[movieTitle], режисер [director], тривалість [duration] хв`.
 
+// const objFilm = {
+//     movieTitle: 'Doroga',
+//     director:'Filini',
+//     duration:104,
+//     getMovieInfo(){
+//         return `${this.movieTitle}, ${this.director}, ${this.duration}`
+//     }
+// }
 // ---
 
 // **12. Завдання:**
 // Створи об'єкт із властивостями `username` (рядок), `isOnline` (булеве значення).
 // Додай метод `toggleStatus`, який змінює значення `isOnline` на протилежне.
 
+// const odjUser = {
+//     username:'Kosta',
+//     inOnline: true,
+
+//     toggleStatus(){
+//         return !this.inOnline;
+//     },
+
+// }
 // ---
 
 // **13. Завдання:**
 // Створи об'єкт із властивостями `day` (число), `month` (число) та `year` (число).
 // Додай метод `formatDate`, який повертає рядок у форматі: `DD/MM/YYYY`.
 
+// const odjDay = {
+//   day: 30,
+//   month: 7,
+//   year: 2026,
+
+//   formatDate() {
+//     return `${this.day}/${this.month}/${this.year}.`;
+//   },
+// };
+// console.log(odjDay.formatDate());
 // ---
 
 // **14. Завдання:**
@@ -100,11 +255,38 @@
 // значення). Додай метод `checkPrimary`, який повертає `true`, якщо `colorName` є
 // одним із базових кольорів: `"red"`, `"blue"`, `"yellow"`.
 
+// const objColor = {
+//   colorNema: 'blue',
+//   isPrimary: true,
+
+//   checkPrimary() {
+//     if (
+//       this.colorNema === 'red' ||
+//       this.colorNema === 'blue' ||
+//       this.colorNema === 'yellow'
+//     ) {
+//       return this.isPrimary;
+//     }
+//   },
+// };
+// console.log(objColor.checkPrimary());
+
 // ---
 
 // **15. Завдання:**
 // Створи об'єкт із властивостями `animalType` (рядок), `age` (число). Додай метод
 // `isAdult`, який повертає `true`, якщо вік тварини більше або дорівнює 2.
+
+// const objType = {
+//   animalType: 'Sobaka',
+//   age: 11,
+//   isAdult() {
+//     if (this.age >= 2) {
+//       return true;
+//     }
+//   },
+// };
+// console.log(objType.isAdult());
 
 // ---
 
@@ -112,6 +294,16 @@
 // Створи об'єкт із властивостями `planetName` (рядок), `diameter` (число, у км).
 // Додай метод `getRadius`, який повертає радіус планети, ділячи `diameter` на 2.
 
+// const objPlanet = {
+//   planetName: 'luna',
+//   dimeter: 4000,
+
+//   getRadius() {
+//     return this.dimeter / 2;
+//   },
+// };
+
+// console.log(objPlanet.getRadius());
 // ---
 
 // **17. Завдання:**
@@ -119,12 +311,32 @@
 // `duration` (число, у хвилинах). Додай метод `getSongInfo`, який повертає рядок:
 // `"Song '[songName]' by [artist], [duration] minutes"`.
 
+// const objSong = {
+//   songName: 'Litel',
+//   artist: 'ASIDISI',
+//   duration: 10,
+//   getSongInfo() {
+//     return `Song ${this['songName']} by ${this['artist']}, ${this['duration']} minutes `;
+//   },
+// };
+// console.log(objSong.getSongInfo());
 // ---
 
 // **18. Завдання:**
 // Створи об'єкт із властивостями `cityName` (рядок), `population` (число) та
 // `isCapital` (булеве значення). Додай метод `getCityInfo`, який повертає опис
 // міста у форматі: `[cityName] має населення [population]. Столиця: [isCapital]`.
+
+// const objCity = {
+//   cityName: 'New York',
+//   population: 2000,
+//   isCapital: true,
+
+//   getCityInfo() {
+//     return `${this['cityName']} має населення ${this['population']}. Столиця: ${this['isCapital']}`;
+//   },
+// };
+// console.log(objCity.getCityInfo());
 
 // ---
 
@@ -133,11 +345,35 @@
 // `levelUp`, який збільшує рівень на 1, та метод `getUserInfo`, який повертає
 // рядок: `[username], рівень: [level]`.
 
+// const objUser = {
+//   username: 'Anton',
+//   level: 22,
+
+//   levelUp() {
+//     this.level += 1;
+//   },
+
+//   getUserInfo() {
+//     return `${this['username']}, ${this['level']}`;
+//   },
+// };
+// console.log(objUser.levelUp());
+// console.log(objUser.getUserInfo());
+
 // ---
 
 // **20. Завдання:**
 // Створи об'єкт із властивостями `eventName` (рядок), `date` (рядок). Додай метод
 // `getEventInfo`, який повертає рядок: `Подія: [eventName], Дата: [date]`.
+
+// const objEvent = {
+//   eventName: 'Kazantip',
+//   date: 10,
+//   getEventInfo() {
+//     return `Подія: ${this['eventName']}, Дата: ${this['date']}`;
+//   },
+// };
+// console.log(objEvent.getEventInfo());
 
 // ---
 
@@ -145,11 +381,34 @@
 // Створи об'єкт із властивостями `length` (число) та `width` (число). Додай метод
 // `isSquare`, який повертає `true`, якщо довжина і ширина однакові.
 
+// const objLength = {
+//   length: 34,
+//   widht: 35,
+//   isSquare() {
+//     if (this.length === this.widht) {
+//       return true;
+//     }
+
+//   },
+// };
+// console.log(objLength.isSquare());
+
 // ---
 
 // **22. Завдання:**
 // Створи об'єкт із властивостями `temperature` (число). Додай метод `isFreezing`,
 // який повертає `true`, якщо температура менше або дорівнює 0.
+
+// const objTemperature = {
+//   temperature: -23,
+
+//   isFreezing() {
+//     if (this.temperature <= 0) {
+//       return true;
+//     }
+//   },
+// };
+// console.log(objTemperature.isFreezing());
 
 // ---
 
@@ -157,17 +416,42 @@
 // Створи об'єкт із властивостями `score` (число). Додай метод `resetScore`, який
 // встановлює значення `score` на 0.
 
+// const objScore = {
+//   score: 31,
+
+//   resetSocore() {
+//     return (this.score = 0);
+//   },
+// };
+// console.log(objScore.resetSocore());
+
 // ---
 
 // **24. Завдання:**
 // Створи об'єкт із властивостями `name` (рядок), `price` (число). Додай метод
 // `discount`, який приймає відсоток знижки і повертає нову ціну.
 
+// const objName2 = {
+//   name: 'Alex',
+//   price: 3000,
+//   discount() {
+//     return (this.price / 100) * 15;
+//   },
+// };
+// console.log(objName2.discount());
 // ---
 
 // **25. Завдання:**
 // Створи об'єкт із властивостями `weight` (число, у кг). Додай метод
 // `convertToPounds`, який повертає вагу в фунтах (1 кг = 2.20462 фунта).
+
+// const objWidth3 = {
+//   weight: 55,
+//   convertToPounds() {
+//     return this.weight * 220462;
+//   },
+// };
+// console.log(objWidth3.convertToPounds());
 
 // ---
 
@@ -175,17 +459,47 @@
 // Створи об'єкт із властивостями `speed` (число). Додай метод `increaseSpeed`,
 // який приймає число і додає його до швидкості.
 
+// const objSpeed = {
+//   speed: 56,
+//   increaseSpeed(number) {
+//     return (this.speed += number);
+//   },
+// };
+
+// console.log(objSpeed.increaseSpeed(100));
+
 // ---
 
 // **27. Завдання:**
 // Створи об'єкт із властивостями `title` (рядок), `isPublished` (булеве значення).
 // Додай метод `togglePublish`, який змінює значення `isPublished` на протилежне.
 
+// const objTitle = {
+//   title: 'Hello',
+//   isPublished: true,
+
+//   togglePublish() {
+//     return !this.isPublished;
+//   },
+// };
+// console.log(objTitle.togglePublish());
 // ---
 
 // **28. Завдання:**
 // Створи об'єкт із властивостями `email` (рядок). Додай метод `isGmail`, який
 // повертає `true`, якщо email містить домен `"@gmail.com"`.
+
+// const objGmail = {
+//   email: 'dogsobaka@gmail.com',
+//   isGmail() {
+//     const email = this.email.indexOf('@gmail.com');
+//     const emailSplice = this.email.slice(email);
+//     if (emailSplice === '@gmail.com') {
+//       return true;
+//     }
+//   },
+// };
+// console.log(objGmail.isGmail());
 
 // ---
 
@@ -194,12 +508,32 @@
 // `calculateDistance`, який повертає відстань від початку координат (формула:
 // √(x² + y²)).
 
+// const objFormyla = {
+//   x: 29,
+//   y: 43,
+
+//   calculateDistance() {
+//     return Math.sqrt(this.x ** 2 + this.y ** 2);
+//   },
+// };
+
+// console.log(objFormyla.calculateDistance());
+
 // ---
 
 // **30. Завдання:**
 // Створи об'єкт із властивостями `hours` (число), `minutes` (число). Додай метод
 // `convertToMinutes`, який повертає загальну кількість хвилин.
 
+// const objHours = {
+//   hours: 25,
+//   minutes: 39,
+//   convertToMinutes() {
+//     return this.hours + this.minutes;
+//   },
+// };
+
+// console.log(objHours.convertToMinutes());
 // ---
 
 // ```

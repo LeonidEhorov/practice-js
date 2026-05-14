@@ -149,17 +149,17 @@
 // 1. Напиши функцію яка приймає довільну кількість рядочків і повертає той рядок
 //    що є найдовшим
 
-function task17() {
-  let total = '';
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > total.length) {
-      total = arguments[i];
-    }
-  }
-  return total;
-}
+// function task17() {
+//   let total = '';
+//   for (let i = 0; i < arguments.length; i++) {
+//     if (arguments[i].length > total.length) {
+//       total = arguments[i];
+//     }
+//   }
+//   return total;
+// }
 
-console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsads'));
+// console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsads'));
 
 // 1. Напиши функцію яка приймає довільну кількість рядочків і обєднує їх в один
 //    цілий рядок.
@@ -207,25 +207,25 @@ console.log(task17('gsfgfs', 'agasgsgasdgs', 'sgfdfdsads'));
 // Задача-52
 // Напишіть функцію, яка приймає рядок password. Якщо пароль містить хоча б одну цифру (includes), хоча б одну велику літеру і довжина більше 8 — поверни "Сильний пароль", інакше — "Слабкий пароль".
 
-function task2(password) {
-  let hasNumber = false;
-  let hasUppercase = false;
-  let isValidLenght = password.length > 8;
+// function task2(password) {
+//   let hasNumber = false;
+//   let hasUppercase = false;
+//   let isValidLenght = password.length > 8;
 
-  for (const el of password) {
-    if (Number(el)) {
-      hasNumber = true;
-    }
-    if (el === el.toUpperCase()) {
-      hasUppercase = true;
-    }
-  }
-  if (isValidLenght && hasNumber && hasNumber) {
-    return 'Сильний пароль';
-  }
-  return 'Слабкий пароль';
-}
-console.log(task2('HroH23klk'));
+//   for (const el of password) {
+//     if (Number(el)) {
+//       hasNumber = true;
+//     }
+//     if (el === el.toUpperCase()) {
+//       hasUppercase = true;
+//     }
+//   }
+//   if (isValidLenght && hasNumber && hasNumber) {
+//     return 'Сильний пароль';
+//   }
+//   return 'Слабкий пароль';
+// }
+// console.log(task2('HroH23klk'));
 // Задача-53
 // Напишіть функцію, яка приймає число number. Якщо число кратне 3 і 5, і його квадрат більше 100 — поверни "Потужне число", якщо тільки кратне 3 або 5 — "Частково підходить", інакше — "Не підходить".
 
@@ -290,17 +290,17 @@ console.log(task2('HroH23klk'));
 // Задача-57
 // Напишіть функцію, яка приймає число number. Якщо число позитивне і його квадрат парний — поверни "Позитивне парне", якщо негативне і його куб менше -100 — "Сильне негативне", інакше — "Інше".
 
-function task7(number) {
-  const square = number ** 2;
-  const res = number ** 3;
-  if (number > 0 && square % 2 === 0) {
-    return 'Позитивне парне';
-  } else if (number < 0 && res < -100) {
-    return 'Сильне негативне';
-  }
-  return 'Інше';
-}
-console.log(task7(1500));
+// function task7(number) {
+//   const square = number ** 2;
+//   const res = number ** 3;
+//   if (number > 0 && square % 2 === 0) {
+//     return 'Позитивне парне';
+//   } else if (number < 0 && res < -100) {
+//     return 'Сильне негативне';
+//   }
+//   return 'Інше';
+// }
+// console.log(task7(1500));
 
 // Задача-58
 // Напишіть функцію, яка приймає рядок word. Якщо слово однаково читається зліва направо і справа наліво (паліндром) — поверни "Паліндром", інакше — "Не паліндром".
@@ -423,7 +423,7 @@ console.log(task7(1500));
 //   }
 //   return 0;
 // }
-console.log(task16(12));
+// console.log(task16(12));
 // Задача-67
 // Напишіть функцію, яка приймає рядок text. Якщо текст повністю у верхньому регістрі — переведи його в нижній, якщо в нижньому — у верхній.
 // function task17(text) {
@@ -435,40 +435,40 @@ console.log(task16(12));
 // console.log(task17('ANTON'));
 // Задача-68
 // Напишіть функцію, яка приймає число number. Поверни "Fizz", "Buzz", "FizzBuzz" або число, але додай умову: якщо число більше 100 — поверни "Занадто велике".
-function task18(number) {}
+// function task18(number) {}
 
-console.log(task18(150));
+// console.log(task18(150));
 // Задача-69
 // Напишіть функцію, яка приймає рядок text. Якщо текст містить більше 3 голосних букв — "Багато голосних", інакше — "Мало голосних".
 
 // Задача-70
 // Напишіть функцію, яка приймає рядок text. Видали всі цифри з рядка і поверни результат. Якщо цифр немає — поверни без змін.
 
-function task20(text) {
-  // return text.replaceAll(/\d\/d/, '');
-  // for (let i = 0; i < text.length; i++) {
-  //   // const x = Number(text[i]);
-  //   // const resalt = text.indexOf(x);
-  //   // const a = text.slice(0, 5);
-  //   // const f = text.slice(6, 8);
-  //   // const y = text.slice(9);
-  //   // const foo = [].concat(a, f, y).join('');
-  //   // if (typeof x === 'number') {
-  //   //   return foo;
-  //   // }
-  //   // return text;
-  // }
+// function task20(text) {
+//   // return text.replaceAll(/\d\/d/, '');
+//   // for (let i = 0; i < text.length; i++) {
+//   //   // const x = Number(text[i]);
+//   //   // const resalt = text.indexOf(x);
+//   //   // const a = text.slice(0, 5);
+//   //   // const f = text.slice(6, 8);
+//   //   // const y = text.slice(9);
+//   //   // const foo = [].concat(a, f, y).join('');
+//   //   // if (typeof x === 'number') {
+//   //   //   return foo;
+//   //   // }
+//   //   // return text;
+//   // }
 
-  let resalt = '';
+//   let resalt = '';
 
-  for (let i = 0; i < text.length; i++) {
-    // console.log(Number(text[i]));
-    if (!Number(text[i])) {
-      // console.log(text[i]);
-      resalt += text[i];
-    }
-  }
-  return resalt;
-}
+//   for (let i = 0; i < text.length; i++) {
+//     // console.log(Number(text[i]));
+//     if (!Number(text[i])) {
+//       // console.log(text[i]);
+//       resalt += text[i];
+//     }
+//   }
+//   return resalt;
+// }
 
-console.log(task20('hello1hf5dd'));
+// console.log(task20('hello1hf5dd'));

@@ -298,50 +298,50 @@
 // contactBook.removeContact('hello2');
 // console.log(contactBook.list);
 
-const contactBook1 = {
-  list: [],
-  addContact(name, tel) {
-    this.list.push({ name, tel });
-  },
-  removeContact(name, tel) {
-    let arr = [];
-    for (const el of this.list) {
-      if (el.name !== name && el.tel !== tel) {
-        arr.push(el);
-      }
-    }
-    this.list = arr;
-  },
-};
+// const contactBook1 = {
+//   list: [],
+//   addContact(name, tel) {
+//     this.list.push({ name, tel });
+//   },
+//   removeContact(name, tel) {
+//     let arr = [];
+//     for (const el of this.list) {
+//       if (el.name !== name && el.tel !== tel) {
+//         arr.push(el);
+//       }
+//     }
+//     this.list = arr;
+//   },
+// };
 
 // ```
 // Створіть об'єкт rectangle, який представлятиме прямокутник з методами для обчислення його площі та периметра. Об'єкт повинен приймати довжини двох сторін під час створення.
 // ```
 
-const rectangle = {
-  a: 10,
-  b: 10,
+// const rectangle = {
+//   a: 10,
+//   b: 10,
 
-  getArea() {
-    return this.a * this.b;
-  },
-};
-console.log(rectangle.getArea());
+//   getArea() {
+//     return this.a * this.b;
+//   },
+// };
+// console.log(rectangle.getArea());
 
 // Math.
 
 // ```
 // Створіть об'єкт toDoList, який зберігатиме список задач та надаватиме методи для додавання нових завдань, позначки задачі як виконаної та виведення списку завдань.
 // ```
-const toDoList = {
-  list: ['hello', 'hello2', 'hello3'],
-  setAddList(newlist) {
-    this.list.push(newlist);
-  },
-};
-console.log(toDoList.list);
-toDoList.setAddList('hello5');
-console.log(toDoList.list);
+// const toDoList = {
+//   list: ['hello', 'hello2', 'hello3'],
+//   setAddList(newlist) {
+//     this.list.push(newlist);
+//   },
+// };
+// console.log(toDoList.list);
+// toDoList.setAddList('hello5');
+// console.log(toDoList.list);
 // ```
 // Створіть об'єкт bankAccount, який представлятиме банківський рахунок із методами для депозиту, зняття коштів та перевірки балансу. Врахуйте обробку можливих помилок (наприклад, недостатньо коштів).
 // ```
@@ -419,30 +419,30 @@ console.log(toDoList.list);
 //   - `findContact(contactName)` - метод, що приймає ім'я контакта та шукає його у
 //     масиві контактів.
 
-const contactBook = {
-  contacts: [],
-  addContact(contact) {
-    this.contacts.push(contact);
-  },
-  deleteContact(contactName) {
-    const idx = this.contacts.indexOf(contactName);
-    if (idx !== -1) {
-      this.contacts.splice(idx, 1);
-    }
-  },
-  findContact(contactName) {
-    const idx = this.contacts.indexOf(contactName);
-    return this.contacts[idx];
-  },
-};
-contactBook.addContact('44445565');
-contactBook.addContact('222224545');
-contactBook.addContact('333345656545');
-console.log(contactBook.contacts);
-contactBook.deleteContact('44445565');
-console.log(contactBook.contacts);
-console.log(contactBook.findContact('222224545'));
-console.log(contactBook.contacts);
+// const contactBook = {
+//   contacts: [],
+//   addContact(contact) {
+//     this.contacts.push(contact);
+//   },
+//   deleteContact(contactName) {
+//     const idx = this.contacts.indexOf(contactName);
+//     if (idx !== -1) {
+//       this.contacts.splice(idx, 1);
+//     }
+//   },
+//   findContact(contactName) {
+//     const idx = this.contacts.indexOf(contactName);
+//     return this.contacts[idx];
+//   },
+// };
+// contactBook.addContact('44445565');
+// contactBook.addContact('222224545');
+// contactBook.addContact('333345656545');
+// console.log(contactBook.contacts);
+// contactBook.deleteContact('44445565');
+// console.log(contactBook.contacts);
+// console.log(contactBook.findContact('222224545'));
+// console.log(contactBook.contacts);
 
 // ---
 
@@ -467,20 +467,20 @@ console.log(contactBook.contacts);
 //     виконану.
 //   - `listTasks()` - метод, що виводить список всіх задач.
 
-const toDoList1 = {
-  tasks: [],
+// const toDoList1 = {
+//   tasks: [],
 
-  addTask(task) {
-    this.tasks.push(task);
-  },
-  markAsDone(taskName) {
-    for (const el of this.tasks) {
-      if (el.title === taskName) {
-        el.isCompleted = true;
-      }
-    }
-  },
-};
+//   addTask(task) {
+//     this.tasks.push(task);
+//   },
+//   markAsDone(taskName) {
+//     for (const el of this.tasks) {
+//       if (el.title === taskName) {
+//         el.isCompleted = true;
+//       }
+//     }
+//   },
+// };
 // ---
 
 // Створити об'єкт **bankAccount**:
@@ -493,25 +493,25 @@ const toDoList1 = {
 //     перевіркою на достатність коштів).
 //   - `checkBalance()` - метод, що повертає поточний баланс.
 
-const bankAccount = {
-  balance: 100,
+// const bankAccount = {
+//   balance: 100,
 
-  deposit(amount) {
-    console.log((this.balance += amount));
-  },
-  withdraw(amount) {
-    if (this.balance < amount) {
-      this.balance = amount;
-    }
-  },
-  checkBalance() {
-    console.log(this.balance);
-  },
-};
+//   deposit(amount) {
+//     console.log((this.balance += amount));
+//   },
+//   withdraw(amount) {
+//     if (this.balance < amount) {
+//       this.balance = amount;
+//     }
+//   },
+//   checkBalance() {
+//     console.log(this.balance);
+//   },
+// };
 
-bankAccount.deposit(80);
-bankAccount.withdraw(350);
-console.log(bankAccount.checkBalance());
+// bankAccount.deposit(80);
+// bankAccount.withdraw(350);
+// console.log(bankAccount.checkBalance());
 
 // ---
 
@@ -527,29 +527,29 @@ console.log(bankAccount.checkBalance());
 //     ISBN.
 //   - `listBooks()` - метод, що виводить список всіх книг.
 
-const libraryCatalog = {
-  books: [],
-  addBook(book) {
-    this.books.push(book);
-  },
-  findBookByAuthor(author) {
-    for (const el of this.books) {
-      if (el === author) {
-        return el.title;
-      }
-    }
-  },
-  findBookByISBN(isbn) {
-    for (const el of this.books) {
-      if (el.title.isbn === isbn) {
-        return el.title;
-      }
-    }
-  },
-  listBooks() {
-    return this.books;
-  },
-};
+// const libraryCatalog = {
+//   books: [],
+//   addBook(book) {
+//     this.books.push(book);
+//   },
+//   findBookByAuthor(author) {
+//     for (const el of this.books) {
+//       if (el === author) {
+//         return el.title;
+//       }
+//     }
+//   },
+//   findBookByISBN(isbn) {
+//     for (const el of this.books) {
+//       if (el.title.isbn === isbn) {
+//         return el.title;
+//       }
+//     }
+//   },
+//   listBooks() {
+//     return this.books;
+//   },
+// };
 
 // ---
 
@@ -561,14 +561,14 @@ const libraryCatalog = {
 //   - `fahrenheitToCelsius(fahrenheit)` - метод, що приймає температуру в градусах
 //     Фаренгейта та повертає її в градусах Цельсія.
 
-const temperatureConverte = {
-  celsiusToFahrenheit(celsius) {
-    return (celsius * 9) / 5 + 32;
-  },
-  fahrenheitToCelsius(fahrenheit) {
-    return ((fahrenheit - 32) * 5) / 9;
-  },
-};
+// const temperatureConverte = {
+//   celsiusToFahrenheit(celsius) {
+//     return (celsius * 9) / 5 + 32;
+//   },
+//   fahrenheitToCelsius(fahrenheit) {
+//     return ((fahrenheit - 32) * 5) / 9;
+//   },
+// };
 
 // ---
 
@@ -583,27 +583,27 @@ const temperatureConverte = {
 //   - `listItems()` - метод, що виводить список всіх товарів у кошику.
 
 // ---
-let total = 0;
-const shoppingCart = {
-  items: [],
+// let total = 0;
+// const shoppingCart = {
+//   items: [],
 
-  addItem(item) {
-    this.items.push(item);
-  },
-  totalCost() {
-    for (const el of this.items) {
-      total += el.length;
-    }
-    console.log(total);
-  },
-  listItems() {
-    return this.items;
-  },
-};
-shoppingCart.addItem(['scolad', 'scolad', 'scolad', 'scolad', 'scolad']);
-shoppingCart.totalCost(['scolad', 'scolad', 'scolad']);
-shoppingCart.listItems();
-console.log(shoppingCart.items);
+//   addItem(item) {
+//     this.items.push(item);
+//   },
+//   totalCost() {
+//     for (const el of this.items) {
+//       total += el.length;
+//     }
+//     console.log(total);
+//   },
+//   listItems() {
+//     return this.items;
+//   },
+// };
+// shoppingCart.addItem(['scolad', 'scolad', 'scolad', 'scolad', 'scolad']);
+// shoppingCart.totalCost(['scolad', 'scolad', 'scolad']);
+// shoppingCart.listItems();
+// console.log(shoppingCart.items);
 
 // Створити об'єкт **socialNetworkUser**:
 
@@ -617,31 +617,31 @@ console.log(shoppingCart.items);
 //     списку друзів.
 //   - `listFriends()` - метод, що виводить список всіх друзів.
 
-const socialNetworkUser = {
-  username: 'Leonid',
-  friends: [],
+// const socialNetworkUser = {
+//   username: 'Leonid',
+//   friends: [],
 
-  addFriend(friendName) {
-    this.friends.push(friendName);
-  },
-  removeFriend(friendName) {
-    let arr = [];
-    for (const el of this.friends) {
-      if (el !== friendName) {
-        arr.push(el);
-      }
-    }
-    this.friends = arr;
-  },
-  listFriends() {
-    console.log(this.friends.join(','));
-  },
-};
+//   addFriend(friendName) {
+//     this.friends.push(friendName);
+//   },
+//   removeFriend(friendName) {
+//     let arr = [];
+//     for (const el of this.friends) {
+//       if (el !== friendName) {
+//         arr.push(el);
+//       }
+//     }
+//     this.friends = arr;
+//   },
+//   listFriends() {
+//     console.log(this.friends.join(','));
+//   },
+// };
 
-socialNetworkUser.addFriend('andri');
-socialNetworkUser.addFriend('Andri');
-socialNetworkUser.listFriends();
-// ---
+// socialNetworkUser.addFriend('andri');
+// socialNetworkUser.addFriend('Andri');
+// socialNetworkUser.listFriends();
+// // ---
 
 // Створити об'єкт **musicPlayer**:
 
@@ -657,50 +657,50 @@ socialNetworkUser.listFriends();
 
 // ---
 
-const musicPlayer = {
-  songs: [],
-  currentSong: 'Sting',
+// const musicPlayer = {
+//   songs: [],
+//   currentSong: 'Sting',
 
-  ddSong(song) {
-    this.songs.push(song);
-  },
-  play() {
-    for (const el of this.songs) {
-      if (el === this.currentSong) {
-        return el;
-      }
-    }
-  },
-  pause() {
-    for (const el of this.songs) {
-      if (el !== this.currentSong) {
-        return;
-      }
-    }
-  },
-  next() {
-    for (const el of this.songs) {
-      if (el !== el) {
-        return;
-      }
-      return el;
-    }
-  },
-  previous() {
-    for (const el of this.songs) {
-      const playSongs = this.songs.length - 1;
-      if (playSongs < 0) {
-      }
-      return el;
-    }
-  },
-};
+//   ddSong(song) {
+//     this.songs.push(song);
+//   },
+//   play() {
+//     for (const el of this.songs) {
+//       if (el === this.currentSong) {
+//         return el;
+//       }
+//     }
+//   },
+//   pause() {
+//     for (const el of this.songs) {
+//       if (el === this.currentSong) {
+//         return el;
+//       }
+//     }
+//   },
+//   next() {
+//     for (const el of this.songs) {
+//       if (el !== el) {
+//         return;
+//       }
+//       return el;
+//     }
+//   },
+//   previous() {
+//     for (const el of this.songs) {
+//       const playSongs = this.songs.length - 1;
+//       if (playSongs < 0) {
+//       }
+//       return el;
+//     }
+//   },
+// };
 
-musicPlayer.ddSong(['fajfal, afadsf, dafdf, dsafsd', 'fdf']);
-musicPlayer.pause();
-musicPlayer.next();
-musicPlayer.previous();
-console.log(musicPlayer.songs);
+// musicPlayer.ddSong(['fajfal, afadsf, dafdf, dsafsd', 'fdf']);
+// musicPlayer.pause();
+// musicPlayer.next();
+// musicPlayer.previous();
+// console.log(musicPlayer.songs);
 
 // Створити об'єкт **myString**:
 
@@ -712,25 +712,28 @@ console.log(musicPlayer.songs);
 //   - `ucWords(str)` - метод, що приймає рядок та робить заголовною першу літеру
 //     кожного слова цього рядка.
 
-const myString = {
-  reverse(str) {
-    console.log(str.split('').reverse().join(''));
-  },
-  ucFirst(str) {
-    console.log(str[0].toUpperCase() + str.slice(1));
-  },
-  ucWords(str) {
-    if (str[0] !== str[0].toUpperCase()) {
-      return str[0].toUpperCase() + str.slice(1);
-    }
-  },
-};
-// myString.reverse('hello');
-// myString.ucFirst('kiev');
-// myString.ucWords('true');
-console.log(myString.reverse('hello'));
-console.log(myString.ucFirst('kiev'));
-console.log(myString.ucWords('true'));
+// const myString = {
+//   reverse(str) {
+//     return str.split('').reverse().join('');
+//   },
+//   ucFirst(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+//   },
+//   ucWords(str) {
+//     const arr = [];
+//     const strSplit = str.split(' ');
+//     for (const el of strSplit) {
+//       arr.push(this.ucFirst(el));
+//     }
+//     return arr.join(' ');
+//   },
+// };
+// // myString.reverse('hello');
+// // myString.ucFirst('kiev');
+// // myString.ucWords('true,world,hello');
+// console.log(myString.reverse('hello'));
+// console.log(myString.ucFirst('kiev'));
+// console.log(myString.ucWords('true world hello'));
 
 // ---
 
@@ -748,41 +751,94 @@ console.log(myString.ucWords('true'));
 
 // ---
 
-const validator = {
-  arr: [],
-  isCorect: true,
-  isNontCorect: false,
+// const validator = {
+//   arr: [],
+//   isCorect: true,
+//   isNontCorect: false,
 
-  isEmail(str) {
-    this.arr.push(str);
-    for (const el of this.arr) {
-      if (el.email === str) {
-        this.isCorect = true;
-      }
-    }
-  },
-  isDomain(str) {
-    this.arr.push(str);
-    for (const el of this.arr) {
-      if (el.domen === str) {
-        this.isCorect = true;
-      }
-    }
-  },
-  isDate(str) {
-    this.arr.push(str);
-    for (const el of this.arr) {
-      if (el.data === str) {
-        this.isCorect = true;
-      }
-    }
-  },
-  isPhone(str) {
-    this.arr.push(str);
-    for (const el of this.arr) {
-      if (el.tel === str) {
-        this.isCorect = true;
-      }
-    }
-  },
-};
+//   isEmail(str) {
+//     this.arr.push(str);
+//     for (const el of this.arr) {
+//       if (el.email === str) {
+//         return (this.isCorect = true);
+//       }
+//     }
+//     return false;
+//   },
+//   isDomain(str) {
+//     this.arr.push(str);
+//     for (const el of this.arr) {
+//       if (el.domen === str) {
+//         return (this.isCorect = true);
+//       }
+//     }
+//     return false;
+//   },
+//   isDate(str) {
+//     this.arr.push(str);
+//     for (const el of this.arr) {
+//       if (el.data === str) {
+//         return (this.isCorect = true);
+//       }
+//     }
+//     return false;
+//   },
+//   isPhone(str) {
+//     this.arr.push(str);
+//     for (const el of this.arr) {
+//       if (el.tel === str) {
+//         return (this.isCorect = true);
+//       }
+//     }
+//     return false;
+//   },
+// };
+
+// function foo(...rest) {
+//   let total = 0;
+//   for (const el of rest) {
+//     total += el;
+//   }
+//   return total;
+// }
+// console.log(foo(10, 34, 44, 56, 66, 6, 6));
+
+// function foo(min, max, ...rest) {
+//   let arr = [];
+//   for (const el of rest) {
+//     if (el > min && el < max) {
+//       arr.push(el);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(foo(25, 80, 90, 43, 34, 23, 20));
+
+// function obj1(obj, obj2) {
+//   const objSpred = {
+//     ...obj,
+//     ...obj2,
+//   };
+//   return objSpred;
+// }
+// console.log(obj1({ name: 'Afdf' }, { age: 12 }));
+
+// const foo = callback1 => {
+//   callback1('Andre');
+// };
+// const sayHi = name => {
+//   console.log('Hello World', name);
+// };
+// foo(sayHi);
+
+// const arr = [3, 545, 45, 45, 341];
+// function showEl(naber, idx) {
+//   console.log(naber, idx);
+// }
+// arr.forEach(showEl);
+
+// showEl(3)
+// showEl(545)
+// showEl(45)
+// showEl(45)
+// showEl(341)
