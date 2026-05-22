@@ -922,63 +922,257 @@ const heroes = [
 ];
 
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив імен усіх героїв.
+
+function task7() {
+  const resalt = heroes.map(el => {
+    return el.biography.fullName;
+  });
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    gender дорівнює 'Male'.
+function task1() {
+  const res = heroes.every(item => item.appearance.gender === 'Male');
+  return res;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    eyeColor дорівнює 'Blue'.
+
+function task2() {
+  const resalt = heroes.filter(el => el.appearance.eyeColor === 'Blue');
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    hairColor дорівнює 'Black'.
+
+function task23() {
+  const resalt = heroes.filter(el => el.appearance.hairColor === 'Black');
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    race дорівнює 'Human'.
+function task24() {
+  const resalt = heroes.filter(el => el.appearance.race === 'Human');
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    publisher дорівнює 'Marvel Comics'.
+
+function task3() {
+  const foo = heroes.filter(el => el.appearance.publisher === 'Marvel Comics');
+  return foo;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    powerstats.power більше ніж 80.
+
+function task32() {
+  const resalt = heroes.filter(el => el.powerstats.power > 80);
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    powerstats.intelligence менше ніж 50.
+
+function task33() {
+  const resalt = heroes.filter(el => el.powerstats.intelligence > 50);
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає героя з name рівним
 //    'Doctor Strange'.
+function task34() {
+  const resalt = heroes.find(el => el.name === 'Doctor Srange');
+  return resalt;
+}
 // 1. Напиши функцію, яка приймає масив героїв та повертає героя з максимальним
 //    значенням powerstats.strength.
+
+function task4() {
+  const resalt = heroes.find(el => el.powerstats.lenght === 10);
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає героя з мінімальним
 //    значенням powerstats.speed.
+
+function task35() {
+  const minSpeed = Math.min(...heroes.map(el => el.powerstats.speed));
+
+  return heroes.find(el => el.powerstats.speed === minSpeed);
+}
+
+// console.log(task35());
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    appearance.weight[1] менше 75 кг.
+
+function task36() {
+  const resalt = heroes.filter(el => el.appearance.weight[1] <= '75');
+  return resalt;
+}
+// console.log(task36());
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    appearance.height[1] більше 180 см.
+
+function task37() {
+  const resalt = heroes.filter(el => el.appearance.height[1] > '180');
+  return resalt;
+}
+// console.log(task37());
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив назв
 //    biography.firstAppearance усіх героїв.
+function task38() {
+  const resalt = heroes.map(el => {
+    return el.biography.firstAppearance;
+  });
+  return resalt;
+}
+
+// console.log(task38());
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив назв
 //    work.occupation усіх героїв.
+
+function task39() {
+  const resalt = heroes.map(el => el.work.occupation);
+  return resalt;
+}
+// console.log(task39());
 // 1. Напиши функцію, яка приймає масив героїв та сортує його за зростанням
 //    powerstats.intelligence.
+function task40() {
+  const resalt = heroes.sort((a, b) => {
+    return a.powerstats.intelligence - b.powerstats.intelligence;
+  });
+  return resalt;
+}
+// console.log(task40());
+
 // 1. Напиши функцію, яка приймає масив героїв та сортує його за спаданням
 //    powerstats.power.
+
+function task41() {
+  const resalt = heroes.sort((a, b) => {
+    return b.powerstats.power - a.powerstats.power;
+  });
+  return resalt;
+}
+// console.log(task41());
 // 1. Напиши функцію, яка приймає масив героїв та сортує його за алфавітом по name.
+
+function task42() {
+  const resalt = heroes.sort((a, b) => {
+    return a.name.length - b.name.length;
+  });
+  return resalt;
+}
+// console.log(task42());
+
 // 1. Напиши функцію, яка приймає масив героїв та перевіряє, чи є хоча б один герой
 //    з alignment рівним 'bad'.
+
+function task43() {
+  const resalt = heroes.every(el => el.biography.alignment === 'bad');
+  return resalt;
+}
+// console.log(task43());
 // 1. Напиши функцію, яка приймає масив героїв та перевіряє, чи всі герої мають
 //    alignment рівним 'good'.
+
+function task5() {
+  const resalt = heroes.every(el => el.appearance.alignment === 'good');
+  return resalt;
+}
+// console.log(task5());
 // 1. Напиши функцію, яка приймає масив героїв та перевіряє, чи є хоча б один герой
 //    з powerstats.intelligence рівним 100.
+
+function task6() {
+  const resalt = heroes.some(el => el.appearance.powerstats === 100);
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та перевіряє, чи всі герої мають
 //    race, відмінний від null.
+
+function task6() {
+  const resalt = heroes.every(el => el.appearance.race !== null);
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та перевіряє, чи є хоча б один герой
 //    вагою більше ніж 150 кг.
 // 1. Напиши функцію, яка приймає масив героїв та повертає індекс героя з id
 //    рівним 226.
+
+function task77() {
+  const resalt = heroes.findIndex(el => el.id === 226);
+  return resalt;
+}
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив довжин масиву
 //    aliases кожного героя.
+
+function task7() {
+  const resalt = heroes.map(el => el.biography.aliases.length);
+  return resalt;
+}
+// console.log(task7());
 // 1. Напиши функцію, яка приймає масив героїв та повертає героя, у якого найбільше
 //    aliases.
+
+function task55() {
+  const maxAliases = Math.max(...heroes.map(el => el.biography.aliases.length));
+  const resalt = heroes.find(el => el.biography.aliases.length === maxAliases);
+  return resalt;
+}
+// console.log(task55());
+
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких
 //    кількість aliases більше ніж 3.
+function task56() {
+  const resalt = heroes.filter(el => el.biography.aliases.length > 3);
+  return resalt;
+}
+// console.log(task56());
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, у яких в
 //    полі work.occupation значення дорівнює "-".
+
+function task57() {
+  const resalt = heroes.filter(el => el.work.occupation === '-');
+  return resalt;
+}
+// console.log(task57());
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив героїв, які мають
 //    у groupAffiliation згадку про 'Avengers'.
+
+function task58() {
+  const resalt = heroes.filter(el => {
+    return el.connections.groupAffiliation.includes('Avengers');
+  });
+
+  return resalt;
+}
+// console.log(task58());
 // 1. Напиши функцію, яка приймає масив героїв та повертає масив, де кожен елемент
 //    — рядок виду: "NAME has POWER power".
+
+function task59() {
+  const resalt = heroes.map(el => {
+    console.log(el);
+  });
+}
+// console.log(task59());
+// const arr = [1,3,5,5,1,2,4,67,7]
+// arr.filter((elem)=>elem > 3)
+// Array.some(()=>{})
+// Array.every()
+// Array.find()
 
 // 1. Напиши функцію, яка повертає масив імен лише тих супергероїв, яким більше 20
 //    років. Масив має бути відсортований за алфавітом.
@@ -1313,72 +1507,488 @@ const books = [
 // 1. Отримати масив назв всіх книжок.
 // 1. Отримати масив авторів всіх книжок.
 // 1. Створити масив об'єктів, які містять лише назву та автора кожної книжки.
+function task13() {
+  const resalt = books.map(el => {
+    return { title: el.title, author: el.author };
+  });
+}
 // 1. Створити масив цін всіх книжок з подвоєною вартістю.
+
+function foo() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ title: el.title, price: el.price * 2 });
+  });
+  return arr;
+}
+// console.log(foo());
+
 // 1. Створити масив років видання всіх книжок з доданими 5 роками до кожного.
+
+function foo1() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ author: el.author, year: el.year + 5 });
+  });
+  return arr;
+}
+// console.log(foo1());
+
 // 1. Створити масив об'єктів, які містять назву книжки та її рейтинг у відсотках
 //    (помножений на 10).
+
+function foo2() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ author: el.author, rating: el.rating * 1.1 });
+  });
+  return arr;
+}
+// console.log(foo2());
+
 // 1. Створити масив об'єктів, де назва книжки буде в верхньому регістрі.
+
+function foo3() {
+  let arr = [];
+  const res = books.map(el => {
+    arr.push({ author: el.author.toUpperCase() });
+  });
+  return arr;
+}
+// console.log(foo3());
 // 1. Створити масив рядків, що містять інформацію про кожну книжку в форматі
 //    "назва - автор".
+
+function foo4() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ genre: el.genre, author: el.author });
+  });
+  return arr;
+}
+// console.log(foo4());
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `discountPrice`,
 //    що дорівнює ціні зі знижкою 10%.
+
+function foo5() {
+  let arr = [];
+  const resalt = books.map(el => {
+    el.discountPrice = el.price * 0.1;
+
+    arr.push({ author: el.author, discountPrice: el.discountPrice });
+  });
+  return arr;
+}
+// console.log(foo5());
+
 // 1. Створити масив об'єктів, що містять назву книжки та її ціну з доданим
 //    податком 15%.
+
+function foo6() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ author: el.author, price: el.price * 1.15 });
+  });
+  return arr;
+}
+// console.log(foo6());
 // 1. Створити масив назв книжок, які видані після 2000 року.
+
+function foo7() {
+  let arr = [];
+  const resalt = books.map(el => {
+    if (el.year > 2000) {
+      arr.push({ author: el.author, year: el.year });
+    }
+  });
+  return arr;
+}
+// console.log(foo7());
+
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `isClassic`, що
 //    дорівнює `true`, якщо книжка видана до 1950 року.
+
+function foo8() {
+  let arr = [];
+
+  const resalt = books.map(el => {
+    el.isClassic = true;
+    if (el.year > 1950) {
+      arr.push({ author: el.author, year: el.year, isClassic: el.isClassic });
+    }
+  });
+  return arr;
+}
+// console.log(foo8());
 // 1. Отримати масив жанрів всіх книжок у верхньому регістрі.
+
+function foo9() {
+  let arr = [];
+
+  const resalt = books.map(el => {
+    arr.push({ genre: el.genre.toLocaleUpperCase() });
+  });
+  return arr;
+}
+// console.log(foo9());
 // 1. Створити масив назв книжок, де всі слова в назві починаються з великої
 //    літери.
+
+function str(str1) {
+  const resalt = str1[0].toLocaleUpperCase();
+  const strSlice = str1.slice(1);
+  const res = resalt + strSlice;
+  return res;
+}
+console.log(str('hello'));
+
+function strLenght(str2) {
+  const arr = str2.split(' ');
+  const resalt = arr.map(str).join(' ');
+  return resalt;
+}
+
+function foo10() {
+  const resalt = books.map(book => {
+    return strLenght(book.title);
+  });
+}
+
 // 1. Створити масив об'єктів, що містять лише автора та рік видання кожної книжки.
+
+function foo11() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ author: el.author, year: el.year });
+  });
+  return arr;
+}
+// console.log(foo11());
+
 // 1. Створити масив цін книжок, конвертованих з доларів у євро (курс 1 долар =
 //    0.85 євро).
+
+function foo12() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ author: el.author, price: el.price * 0.86 });
+  });
+  return arr;
+}
+// console.log(foo12());
+
 // 1. Створити масив назв книжок з доданим в кінці рядком "(Special Edition)".
+
+function foo13() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ title: el.title + ' ' + 'Special Edition' });
+  });
+  return arr;
+}
+// console.log(foo13());
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `shortTitle`, що
 //    містить тільки перше слово з назви.
+
+function foo14() {
+  let arr = [];
+  const resalt = books.map(el => {
+    const idx = el.title.indexOf(' ');
+    const a = el.title.slice(0, idx);
+    if (idx === -1) {
+      arr.push({ shortTitle: el.title });
+    }
+    if (idx !== -1) {
+      arr.push({ shortTitle: a });
+    }
+  });
+
+  return arr;
+}
+// console.log(foo14());
+
 // 1. Створити масив об'єктів, де кожна книжка буде мати нове поле `description`,
 //    що містить рядок "Ця книга від автора [author] була видана у [year] році".
+
+function foo15() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ description: el.author, year: el.year });
+  });
+  return arr;
+}
+// console.log(foo15());
+
 // 1. Створити масив об'єктів, що містять лише назву та жанр кожної книжки, де жанр
 //    записаний у нижньому регістрі.
+
+function foo16() {
+  let arr = [];
+  const resalt = books.map(el => {
+    arr.push({ title: el.title, genre: el.genre.toLocaleLowerCase() });
+  });
+  return arr;
+}
+// console.log(foo16());
 
 // ---
 
 // 1. Відсортувати книги за роком видання від найдавнішого до найновішого.
+
+function sortTsks() {
+  const resalt = books.toSorted((right, left) => {
+    return left.year - right.year;
+  });
+  return resalt;
+}
+// console.table(sortTsks());
+
 // 1. Відсортувати книги за ціною від найнижчої до найвищої.
+
+function sortTasks() {
+  const resalt = books.toSorted((left, right) => {
+    return left.price - right.price;
+  });
+  return resalt;
+}
+// console.table(sortTasks());
+
 // 1. Відсортувати книги за рейтингом від найнижчого до найвищого.
 // 1. Відсортувати книги за назвою у алфавітному порядку (від А до Я).
+
+function strLocaleCompare() {
+  const resalt = books.toSorted((left, right) => {
+    return left.title.localeCompare(right.title);
+  });
+  return resalt;
+}
+
 // 1. Відсортувати книги за автором у зворотньому алфавітному порядку (від Z до A).
+
+function sort2() {
+  const resalt = books.toSorted((right, left) => {
+    return left.author.localeCompare(right.author);
+  });
+  return resalt;
+}
+// console.table(sort2());
+
 // 1. Відсортувати книги за жанром у алфавітному порядку, але книги одного жанру за
 //    назвою у зворотньому алфавітному порядку.
+
+function sotr5() {
+  return books
+    .toSorted((left, right) => {
+      return left.genre.localeCompare(right.genre);
+    })
+    .filter(el => {
+      return el.genre === el.genre;
+    })
+    .toSorted((right, left) => {
+      return left.genre.localeCompare(right.genre);
+    });
+}
+// console.log(sotr5());
+
 // 1. Відсортувати книги за назвою у алфавітному порядку, але книги з однаковою
 //    назвою за автором у зворотньому алфавітному порядку.
+
+function sort6() {
+  return books
+    .toSorted((left, right) => {
+      return left.title.localeCompare(right.title);
+    })
+    .filter(el => {
+      return el.author === el.author;
+    })
+    .toSorted((right, left) => {
+      return left.author.localeCompare(right.author);
+    });
+}
+// console.table(sort6());
+
 // 1. Відсортувати книги за ціною, але спочатку розташувати ті, які коштують менше
 //    10 доларів, потім решту.
+
+function sort7() {
+  return books
+    .filter(el => {
+      return el.price < 10;
+    })
+    .toSorted((left, right) => {
+      return left.price - right.price;
+    });
+}
+// console.log(sort7());
+
 // 1. Відсортувати книги за рейтингом, але спочатку розташувати ті, які мають
 //    рейтинг 4.8 і вище, потім решту.
+
+function sort11() {
+  return books
+    .filter(el => {
+      return el.rating > 4.8;
+    })
+    .toSorted((right, left) => {
+      return left.rating - right.rating;
+    });
+}
+// console.log(sort11());
+
 // 1. Відсортувати книги спочатку за жанром, а потім за роком видання.
 
+function sort12() {
+  return books
+    .toSorted((left, right) => {
+      return left.genre.localeCompare(right.genre);
+    })
+    .toSorted((left, right) => {
+      return left.year - right.year;
+    });
+}
+// console.log(sort12());
 // ---
 
 // 1. Отримати всі книги, видані після 2000 року та відсортувати їх за рейтингом
 //    від найвищого до найнижчого, повернути лише назви.
+
+function str4() {
+  return books
+    .filter(el => {
+      return el.year >= 2000;
+    })
+    .toSorted((left, right) => {
+      return left.rating - right.rating;
+    })
+    .map(el => {
+      return el.title;
+    });
+}
+
 // 1. Отримати всі книги, автором яких є 'Fyodor Dostoevsky', відсортувати їх за
 //    роком видання від найдавнішого до найновішого та вивести перші 5 книг.
+
+function sortTo() {
+  return books
+    .filter(el => {
+      return el.author === 'Fyodor Dostoevsky';
+    })
+    .toSorted((left, right) => {
+      return left.year - right.year;
+    })
+    .map(el => {
+      return el;
+    });
+}
+// console.log(sortTo());
+
 // 1. Отримати всі книги з ціною меншою ніж 10 доларів, відсортувати їх за ціною
 //    від найнижчої до найвищої та вивести назви книг.
+
+function sortBook() {
+  return books
+    .filter(el => {
+      return el.price < 10;
+    })
+    .toSorted((left, right) => {
+      return left.price - right.price;
+    });
+}
+// console.log(sortBook());
 // 1. Отримати всі книги з рейтингом 4.8 і вище, відсортувати їх за автором у
 //    зворотньому алфавітному порядку та вивести авторів унікальних книг.
+
+function tosortedReting() {
+  return books
+    .filter(el => {
+      return el.rating > 4.8;
+    })
+    .toSorted((right, left) => {
+      return left.author.localeCompare(right.author);
+    });
+}
+// console.log(tosortedReting());
 // 1. Отримати всі книги жанру 'Romance' з ціною меншою ніж 8 доларів та
 //    відсортувати їх за рейтингом від найвищого до найнижчого.
+
+function tosortedGener() {
+  return books
+    .filter(el => {
+      return el.genre === 'Romance' && el.price < 8;
+    })
+    .toSorted((right, left) => {
+      return left.rating - right.rating;
+    });
+}
+// console.log(tosortedGener());
+
 // 1. Отримати всі книги, видані до 1900 року, відсортувати їх за рейтингом від
 //    найвищого до найнижчого та вивести першу книгу.
+
+function tosortBooks() {
+  const resalt = books
+    .filter(el => {
+      return el.year < 1900;
+    })
+    .toSorted((right, left) => {
+      return left.rating - right.rating;
+    });
+  return resalt[0];
+}
+// console.log(tosortBooks());
 // 1. Отримати всі книги, що містять слово 'and' у назві, відсортувати їх за роком
 //    видання від найдавнішого до найновішого та вивести останню книгу.
+
+function sortStr() {
+  const resalt = books
+    .filter(el => {
+      return el.title.includes('and');
+    })
+    .toSorted((right, left) => {
+      return left.year - right.year;
+    });
+  return resalt[resalt.length - 1];
+}
+// console.log(sortStr());
 // 1. Отримати всі книги, автором яких є 'J.R.R. Tolkien', відсортувати їх за
 //    рейтингом від найвищого до найнижчого та вивести середній рейтинг.
+
+function sortBoks1() {
+  let total = 0;
+  const resalt = books
+    .filter(el => {
+      return el.author === 'J.R.R. Tolkien';
+    })
+    .toSorted((right, left) => {
+      return left.rating - right.rating;
+    })
+    .map(el => {
+      return (total += el.rating);
+    });
+  return total / resalt.length;
+}
+// console.log(sortBoks1());
 // 1. Отримати всі книги жанру 'Historical' з рейтингом вище 4.7, відсортувати їх
 //    за роком видання від найдавнішого до найновішого та вивести останні 3 книги.
 
+function sort22() {
+  const foo = books
+    .filter(el => {
+      return el.genre === 'Historical' && el.rating > 4.7;
+    })
+    .toSorted((right, left) => {
+      return left.year - right.year;
+    });
+  return foo;
+}
+// console.log(sort22());
+
+// title: "Harry Potter and the Sorcerer's Stone",
+//     author: 'J.K. Rowling',
+//     year: 1997,
+//     genre: 'Fantasy',
+//     price: 10.99,
+//     rating: 4.8,
 //?===================================================================
 //?===================================================================
 //?===================================================================
@@ -1589,96 +2199,730 @@ const cars = [
 ];
 
 // 1. Знайти авто заданого кольору
+
+function car() {
+  const resalt = cars.filter(el => {
+    return el.color.toLocaleLowerCase() === 'gray';
+  });
+  return resalt;
+}
+// console.log(car());
 // 2. Знайти усі спорткари
+function carse() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleLowerCase() === 'coupe';
+  });
+  return resalt;
+}
+// console.table(carse());
+
 // 3. Знайти авто 2022 року
+
+function car1() {
+  const resalt = cars.filter(el => {
+    return el.year === 2022;
+  });
+  return resalt;
+}
+// console.table(car1());
+
 // 4. Знайти авто певної марки
+
+function carModel() {
+  const resalt = cars.find(el => {
+    return el.model.toLocaleLowerCase() === 'range rover evoque';
+  });
+  return resalt;
+}
+// console.log(carModel());
+
 // 5. Знайти авто дорожче заданої ціни
+function carPrice() {
+  const resalt = cars.find(el => {
+    return el.price === 70000;
+  });
+  return resalt;
+}
+// console.log(carPrice());
+
 // 6. Знайти авто заданого типу
+function carType() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleUpperCase() === 'SUV';
+  });
+  return resalt;
+}
+// console.table(carType());
 // 7. Знайти авто з кількістю більше ніж задане значення
+function carAmaunt() {
+  const resalt = cars.filter(el => {
+    return el.amount > 3;
+  });
+  return resalt;
+}
+// console.table(carAmaunt());
 // 8. Знайти авто, випущені після 2018 року
+function carYear() {
+  const resalt = cars.filter(el => {
+    return el.year > 2018;
+  });
+  return resalt;
+}
+// console.table(carYear());
+
 // 9. Знайти авто, випущені до 2015 року
+
+function carYear2() {
+  const resalt = cars.filter(el => {
+    return el.year < 2015;
+  });
+  return resalt;
+}
+// console.table(carYear2());
 // 10. Знайти авто, ціна яких в межах від 20000 до 40000
+
+function carPrice2() {
+  const resalt = cars.filter(el => {
+    return el.price > 20000 && el.price < 40000;
+  });
+  return resalt;
+}
+// console.table(carPrice2());
+
 // 11. Знайти всі авто, які не є спортивними
+
+function carType2() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleLowerCase() !== 'coupe';
+  });
+  return resalt;
+}
+// console.table(carType2());
 // 12. Знайти всі авто чорного кольору
+
+function carColor() {
+  const resalt = cars.filter(el => {
+    return el.color.toLocaleLowerCase() === 'black';
+  });
+  return resalt;
+}
+// console.log(carColor());
 // 13. Знайти всі автомобілі марки 'BMW'
+function carModel2() {
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleUpperCase() === 'BMW';
+  });
+  return resalt;
+}
+// console.log(carModel2());
 // 14. Знайти всі авто типу 'SUV'
+
+function carSuv() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleUpperCase() === 'SUV';
+  });
+  return resalt;
+}
+// console.table(carSuv());
 // 15. Знайти всі авто, що мають ціну менше ніж 30000
+
+function carMin() {
+  const resalt = cars.filter(el => {
+    return el.price < 30000;
+  });
+  return resalt;
+}
+// console.table(carMin());
 // 16. Знайти всі авто, що мають ціну більше ніж 50000
+
+function carMax() {
+  const resalt = cars.filter(el => {
+    return el.price > 50000;
+  });
+  return resalt;
+}
+// console.table(carMax());
 // 17. Знайти всі авто, випущені після 2021 року
+function carYear22() {
+  const resalt = cars.filter(el => {
+    return el.year > 2021;
+  });
+  return resalt;
+}
+// console.table(carYear22());
 // 18. Знайти всі авто марки 'Audi'
+
+function carBrand() {
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleLowerCase() === 'audi';
+  });
+  return resalt;
+}
+// console.table(carBrand());
+
 // 19. Знайти всі авто, що мають кількість більше 2
+function carAmout() {
+  const resalt = cars.filter(el => {
+    return el.amount > 2;
+  });
+  return resalt;
+}
+// console.table(carAmout());
 // 20. Знайти всі авто червоного кольору
+function carBlack() {
+  const resalt = cars.filter(el => {
+    return el.color.toLocaleLowerCase() === 'black';
+  });
+  return resalt;
+}
+// console.table(carBlack());
 // 21. Знайти всі авто, які є седанами
+function carSedan() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleLowerCase() === 'sedan';
+  });
+  return resalt;
+}
+// console.table(carSedan());
 // 22. Знайти всі авто марки 'Mercedes'
+function carMersedes() {
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleLowerCase() === 'mercedes-benz';
+  });
+  return resalt;
+}
+// console.table(carMersedes());
 // 23. Знайти всі авто, які не є седанами
+function carIsSedan() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleLowerCase() !== 'sedan';
+  });
+  return resalt;
+}
+// console.table(carIsSedan());
 // 24. Знайти всі авто, випущені в 2020 році
+function carYearIs() {
+  const resalt = cars.filter(el => {
+    return el.year === 2020;
+  });
+  return resalt;
+}
+// console.table(carYearIs());
 // 25. Знайти всі авто марки 'Tesla'
+function carElectro() {
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleLowerCase() === 'tesla';
+  });
+  return resalt;
+}
+// console.table(carElectro());
 // 26. Знайти всі авто, що мають кількість менше 5
+function carAvto() {
+  const resalt = cars.filter(el => {
+    return el.amount < 5;
+  });
+  return resalt;
+}
+// console.table(carAvto());
 // 27. Знайти всі авто, що мають ціну більше ніж 25000
+function carPriMax() {
+  const resalt = cars.filter(el => {
+    return el.price > 25000;
+  });
+  return resalt;
+}
+// console.table(carPriMax());
 // 28. Знайти всі авто марки 'Lexus'
+function carLexus() {
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleUpperCase() === 'LEXUS';
+  });
+  return resalt;
+}
+// console.table(carLexus());
 // 29. Знайти всі авто, випущені до 2017 року
+function carYears() {
+  const resalt = cars.filter(el => {
+    return el.year < 2017;
+  });
+  return resalt;
+}
+// console.table(carYears());
 // 30. Знайти всі авто білого кольору
+function carColorWhite() {
+  const resalt = cars.filter(el => {
+    return el.color.toLocaleLowerCase() === 'white';
+  });
+  return resalt;
+}
+// console.table(carColorWhite());
 
 // ---
 
 // 1. Знайти авто заданого кольору
+function carOne() {
+  const resalt = cars.find(el => {
+    return el.color.toLocaleLowerCase() === 'yellow';
+  });
+  return resalt;
+}
+// console.table(carOne());
+
 // 1. Знайти усі спорткари
+function carCoupe() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleLowerCase() === 'coupe';
+  });
+  return resalt;
+}
+// console.table(carCoupe());
+
 // 1. Порахувати кількість авто заданого року
+function carTotal() {
+  let total = 0;
+  const resalt = cars.filter(el => {
+    return el.year === 2020;
+  });
+  return (total += resalt.length);
+}
+// console.table(carTotal());
 // 1. Знайти всі машини з ціною вище вказаної.
+function carCar() {
+  const resalt = cars.filter(el => {
+    return el.price > 60000;
+  });
+  return resalt;
+}
+// console.table(carCar());
 // 1. Порахувати кількість машин вказаного року.
+function carYer21() {
+  let total = 0;
+  const resalt = cars.filter(el => {
+    return el.year === 2019;
+  });
+  return (total += resalt.length);
+}
+// console.table(carYer21());
 // 1. Відсортувати машини за роком випуску (від найстарішого до найновішого).
+function carSort() {
+  const resalt = cars.toSorted((left, right) => {
+    return left.year - right.year;
+  });
+  return resalt;
+}
+// console.table(carSort());
 // 1. Знайти найдорожчу машину.
+function carMax22() {
+  const resalt = Math.max(
+    ...cars.map(el => {
+      return el.price;
+    }),
+  );
+  const maxResalt = cars.filter(el => {
+    return el.price === resalt;
+  });
+  return maxResalt;
+}
+// console.log(carMax22());
 // 1. Знайти всі машини заданої марки (наприклад, Toyota).
+function carToyota() {
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleLowerCase() === 'toyota';
+  });
+  return resalt;
+}
+// console.table(carToyota());
 // 1. Порахувати загальну кількість машин.
+function carNumber() {
+  let total = 0;
+  const resalt = cars.map(el => {
+    return el.brand;
+  });
+  return (total += resalt.length);
+}
+// console.log(carNumber());
 // 1. Відсортувати машини за ціною (від найдешевшої до найдорожчої).
+function carSortBrand() {
+  const resalt = cars.toSorted((left, right) => {
+    return left.price - right.price;
+  });
+  return resalt;
+}
+// console.table(carSortBrand());
 // 1. Знайти всі машини певного типу (наприклад, SUV).
+function carSub() {
+  const resalt = cars.filter(el => {
+    return el.type.toLocaleLowerCase() === 'suv';
+  });
+  return resalt;
+}
+// console.table(carSub());
 // 1. Знайти всі машини певного кольору та року випуску.
+function carColorYer() {
+  const resalt = cars
+    .filter(el => {
+      return el.color.toLocaleLowerCase() === 'gray';
+    })
+    .filter(el => {
+      return el.year === 2022;
+    });
+  return resalt;
+}
+// console.log(carColorYer());
 // 1. Порахувати середню ціну всіх машин.
+function carTotalNumber() {
+  let total = 0;
+  const resalt = cars.map(el => {
+    return (total += el.price);
+  });
+  return total / resalt.length;
+}
+// console.log(carTotalNumber());
 // 1. Знайти всі машини, у яких кількість на складі більша за 0.
+function carsAmount() {
+  const resalt = cars.filter(el => {
+    return el.amount > 0;
+  });
+  return resalt;
+}
+// console.log(carsAmount());
 // 1. Знайти всі машини з ціною менше 30000 та роком випуску після 2020 року.
+function carsMin() {
+  const resalt = cars
+    .filter(el => {
+      return el.price < 30000;
+    })
+    .filter(el => {
+      return el.year > 2020;
+    });
+  return resalt;
+}
+// console.log(carsMin());
 // 1. Порахувати сумарну кількість всіх машин заданої марки.
+function carsBrand() {
+  let total = 0;
+  const resalt = cars.filter(el => {
+    return el.brand.toLocaleLowerCase() === 'toyota';
+  });
+  return (total += resalt.length);
+}
+// console.log(carsBrand());
 // 1. Відсортувати машини за кількістю на складі (від найбільшої до найменшої).
+function carsAmountMax() {
+  const resalt = cars.toSorted((left, right) => {
+    return left.amount - right.amount;
+  });
+  return resalt;
+}
+// console.table(carsAmountMax());
 // 1. Знайти всі машини, які не є спортивними та доступні для продажу.
+function carAmoutPrice() {
+  const resalt = cars
+    .filter(el => {
+      return el.type.toLocaleLowerCase() === 'coupe';
+    })
+    .filter(el => {
+      return el.amount !== 0;
+    });
+  return resalt;
+}
+// console.table(carAmoutPrice());
 // 1. Порахувати загальну вартість всіх машин складі.
+function carsTotalAmount() {
+  let total = 0;
+  const resalt = cars.map(el => {
+    return (total += el.amount);
+  });
+  return total;
+}
+// console.table(carsTotalAmount());
 // 1. Знайти всі машини певного типу та кольору.
+function carsWhite() {
+  const resalt = cars
+    .filter(el => {
+      return el.type.toLocaleLowerCase() === 'coupe';
+    })
+    .filter(el => {
+      return el.color.toLocaleLowerCase() === 'white';
+    });
+  return resalt;
+}
+// console.table(carsWhite());
 // 1. Відсортувати машини за брендом та моделлю в алфавітному порядку.
+function carBrandModel() {
+  const resalt = cars
+    .toSorted((left, right) => {
+      return left.brand.localeCompare(right.brand);
+    })
+    .toSorted((left, right) => {
+      return left.model.localeCompare(right.model);
+    });
+  return resalt;
+}
+// console.table(carBrandModel());
 // 1. Перевірити, чи є хоч одна машина певного кольору.
+function carsFind() {
+  const resalt = cars.some(el => {
+    return el.color === 'Gray';
+  });
+  return resalt;
+}
+// console.log(carsFind());
 // 1. Перевірити, чи є хоч одна машина певного року.
+function carsSome() {
+  const resalt = cars.some(el => {
+    return el.year === 2020;
+  });
+  return resalt;
+}
+// console.log(carsSome());
 // 1. Перевірити, чи є всі авто є спроткарами.
+function carsSomeCoupe() {
+  const resalt = cars.every(el => {
+    return el.type.toLocaleLowerCase() === 'coupe';
+  });
+  return resalt;
+}
+// console.log(carsSomeCoupe());
 // 1. Перевірити, чи є всі новіші за вказаний рік.
+
+function carsEvery() {
+  const resalt = cars.every(el => {
+    return el.year === 2022;
+  });
+  return resalt;
+}
+// console.log(carsEvery());
 // 1. Створити новий масив, що містить лише назви моделей усіх машин.
+function carsEvr() {
+  let arr = [];
+  const resalt = cars.map(el => {
+    arr.push(el.model);
+  });
+  return arr;
+}
+// console.log(carsEvr());
 // 1. Створити масив, що містить розмітку кожної машини.
+function fooCar() {
+  const resalt = cars.map(el => {
+    return `
+    <div class="car-details">
+        <h3>${el.brand} ${el.model}</h3>
+        <p>Рік: ${el.year}</p>
+        <p class="car-price">${el.price} </p>
+        <p class="car-color">${el.color} </p>
+        <p class="car-amount">${el.amount} </p>
+        <p class="car-isSportCar">${el.isSportCar}</p>
+        <p class="car-type">${el.type} </p>
+      </div>
+      `;
+  });
+  return resalt.join(' ');
+}
+// console.log(fooCar());
 // 1. Знайти індекс першої машини з роком випуску 2022 року.
+function carIndx() {
+  const resalt = cars.findIndex(el => {
+    return el.year === 2022;
+  });
+  return resalt;
+}
+// console.log(carIndx());
 // 1. Сортувати за ціною
+function carPrice00() {
+  const resalt = cars.toSorted((left, right) => {
+    return left.price - right.price;
+  });
+  return resalt;
+}
+// console.log(carPrice00());
 
 // ---
 
 // 1. Знайти всі машини з ціною вище 50000 і відсортувати їх за роком випуску від
 //    нових до старих.
+function carsMaxYear() {
+  const resalt = cars
+    .filter(el => {
+      return el.price < 50000;
+    })
+    .toSorted((right, left) => {
+      return left.year - right.year;
+    });
+  return resalt;
+}
+// console.table(carsMaxYear());
 // 1. Створити новий масив, що містить лише моделі доступних для продажу машин.
+function carsAmountPrise1() {
+  let arr = [];
+  const resalt = cars
+    .filter(el => {
+      return el.model && el.amount > 0;
+    })
+    .filter(el => {
+      arr.push(el.model);
+    });
+
+  return arr;
+}
+// console.log(carsAmountPrise1());
+
 // 1. Знайти першу машину, яка не є спортивною та має кількість на на складі більше
 //    0, потім повернути її колір.
+
+function carsaColorRed() {
+  const resalt = cars
+    .filter(el => {
+      return el.type.toLocaleLowerCase() !== 'coupe';
+    })
+    .filter(el => {
+      return el.amount > 0;
+    })
+    .find(el => {
+      return el.color;
+    });
+
+  return resalt;
+}
+// console.log(carsaColorRed());
 // 1. Порахувати загальну вартість всіх машин з кількістю на складі більше 2 і
 //    ціною менше 40 000.
+function carses() {
+  let total = 0;
+  const resalt = cars.filter(el => {
+    return el.amount > 2 && el.price < 40000;
+  });
+  return (total += resalt.length);
+}
+// console.log(carses());
 // 1. Знайти всі машини певного типу (наприклад, SUV), відсортувати їх за роком
 //    випуску від старих до нових і повернути масив тільки зі своїми моделями.
+function carsAA() {
+  let arr = [];
+  const resalt = cars
+    .filter(el => {
+      return el.type.toLocaleLowerCase() === 'suv';
+    })
+    .toSorted((left, right) => {
+      return left.year - right.year;
+    });
+  arr.push(resalt);
+  return arr;
+}
+// console.log(carsAA());
 // 1. Знайти всі спортивні машини з ціною вище 60000, відсортувати їх за спаданням
 //    ціни і повернути масив, що містить лише бренди та моделі цих машин.
+
+function cars22() {
+  let arr = [];
+  const resalt = cars
+    .filter(el => {
+      return el.price > 60000;
+    })
+    .toSorted((left, right) => {
+      return left.price - right.price;
+    })
+    .filter(el => {
+      arr.push(el.brand, el.model);
+    });
+  return arr;
+}
+// console.log(cars22());
 // 1. Знайти всі машини заданого кольору (наприклад, "Blue") та року випуску після
 //    2020, відсортувати їх за зростанням ціни та повернути масив, що містить лише
 //    моделі цих машин та ціну.
+function cars11() {
+  let arr = [];
+
+  const resalt = cars
+    .filter(el => {
+      return el.color === 'Blue' && el.year >= 2020;
+    })
+    .toSorted((left, right) => {
+      return left.price - right.price;
+    })
+    .filter(el => {
+      arr.push(el.model, el.price);
+    });
+  return arr;
+}
+// console.log(cars11());
 // 1. Повернути масив, що містить лише кольори доступних для прродажу машин, та
 //    зробити щоб колір не повторювався дівчі.
+function car22() {
+  let arr = [];
+  const resalt = cars
+    .filter(el => {
+      return el.amount > 0;
+    })
+    .filter(el => {
+      console.log(el.color);
+    });
+
+  return resalt;
+}
+// console.log(car22());
 // 1. Знайти індекс першої машини з ціною менше 20000 та повернути масив, що
 //    містить тільки бренди та моделі машин після знайденої.
+function carIndnx() {
+  let arr = [];
+  const resalt = cars.findIndex(el => {
+    return el.price <= 20000;
+  });
+  const foo = cars.slice(resalt).map(el => {
+    arr.push(el.brand, el.model);
+  });
+  return arr;
+}
+// console.log(carIndnx());
+
 // 1. Знайти всі машини з ціною між 40000 та 60000, відсортувати їх за роком
 //    випуску від нових до старих і повернути масив, що містить тільки моделі цих
 //    машин.
+function arrCar() {
+  let arr = [];
+  const resalt = cars
+    .filter(el => {
+      return el.price > 40000 && el.price < 60000;
+    })
+    .toSorted((left, right) => {
+      return left.year - right.year;
+    })
+    .filter(el => {
+      arr.push(el.model);
+    });
+  return arr;
+}
+// console.log(arrCar());
 // 1. Перевірити, чи є хоч одна машина з кількістю на складі більше 5 і ціною вище
 //    70 000.
+function carOnes() {
+  const resalt = cars.some(el => {
+    return el.amount > 5 && el.price > 70000;
+  });
+  return resalt;
+}
+// console.log(carOnes());
+
 // 1. Знайти всі машини, у яких кількість на складі більша за 0, відсортувати їх по
 //    спаданню кількості та повернути масив, що містить тільки бренди та моделі цих
 //    машин.
+
+function carFilter() {
+  let arr = [];
+  const resalt = cars
+    .filter(el => {
+      return el.amount > 0;
+    })
+    .toSorted((left, right) => {
+      return left.amount - right.amount;
+    })
+    .filter(el => {
+      arr.push(el.brand, el.model);
+    });
+  return arr;
+}
+// console.log(carFilter());
 
 //?===================================================================
 //?===================================================================
@@ -2219,27 +3463,215 @@ const users2 = [
 ];
 
 // 1. Знайти користувачів віком від 25 до 40 років.
+function user4() {
+  const resalt = users.filter(el => {
+    return el.age >= 25 && el.age <= 40;
+  });
+  return resalt;
+}
+// console.log(user4());
 // 1. Знайти всіх користувачів із активним статусом.
+function user2() {
+  const resalt = users.filter(el => {
+    return el.isActive;
+  });
+  return resalt;
+}
+// console.log(user2());
 // 1. Порахувати кількість користувачів молодше 30 років.
+function user3() {
+  let total = 0;
+  const resalt = users.filter(el => {
+    return el.age < 30;
+  });
+
+  return (total += resalt.length);
+}
+// console.log(user3());
 // 1. Відсортувати користувачів віком від старшого до молодшого.
+function carsSort() {
+  const resalt = users.toSorted((right, left) => {
+    return left.age - right.age;
+  });
+  return resalt;
+}
+// console.table(carsSort());
 // 1. Знайти користувачів з електронною поштою на домені gmail.com.
+function carEmeil() {
+  const resalt = users.map(el => {
+    return el.email.includes('gmail.com');
+  });
+  return resalt;
+}
+// console.log(carEmeil());
 // 1. Знайти всіх жінок серед користувачів.
+function userFanale() {
+  const resalt = users.filter(el => {
+    return el.gender === 'Female';
+  });
+  return resalt;
+}
+// console.log(userFanale());
 // 1. Порахувати кількість неактивних користувачів.
+function user() {
+  const resalt = users.filter(el => {
+    return !el.isActive;
+  });
+  return resalt;
+}
+// console.log(user());
 // 1. Відсортувати користувачів на прізвище в алфавітному порядку.
+function user22() {
+  const resalt = users.toSorted((left, right) => {
+    return left.lastName.localeCompare(right.lastName);
+  });
+  return resalt;
+}
+// console.table(user22());
 // 1. Знайти користувача з найбільшим віком.
+function userAge() {
+  const resalt = Math.max(
+    ...users.map(el => {
+      return el.age;
+    }),
+  );
+  const foo = users.filter(el => {
+    return resalt === el.age;
+  });
+  return foo;
+}
+// console.log(userAge());
 // 1. Перевірити, чи є хоча б один користувач із прізвищем "Johnson".
+function userSome() {
+  const resalt = users.some(el => {
+    return el.lastName === 'Johnson';
+  });
+  return resalt;
+}
+// console.log(userSome());
 // 1. Створити новий масив, який містить лише імена користувачів.
+function usersNema() {
+  let arrNema = [];
+  const resalt = users2.filter(el => {
+    arrNema.push(el.name);
+  });
+  return arrNema;
+  return resalt;
+}
+// console.log(usersNema());
 // 1. Створити масив з інформацією про користувачів у форматі JSON.
+function userJson() {
+  const resalt = users2.map(el => {
+    const objJson = JSON.stringify(el);
+    return objJson;
+  });
+  return resalt;
+}
+// console.log(userJson());
 // 1. Знайти індекс першого користувача під назвою "Jane".
+function usersIndx() {
+  const resalt = users2.findIndex(el => {
+    return el.username === 'Jane';
+  });
+  return resalt;
+}
+// console.log(usersIndx());
 // 1. Знайти всіх користувачів чоловічої статі віком від 30 до 50 років.
+
+function usersAge() {
+  const resalt = users.filter(el => {
+    return el.gender === 'Male' && el.age > 30 && el.age < 50;
+  });
+  return resalt;
+}
+// console.table(usersAge());
 // 1. Порахувати загальну кількість користувачів.
+function usersId() {
+  const resalt = users2.map(el => {
+    return el.id;
+  });
+  return resalt.length;
+}
+// console.log(usersId());
 // 1. Знайти всіх користувачів з активним статусом та віком старше 25 років.
+function users10() {
+  const resalt = users.filter(el => {
+    return el.isActive && el.age > 25;
+  });
+  return resalt;
+}
+// console.log(users10());
 // 1. Знайти користувачів із прізвищем, що починається на букву "S".
+function user24() {
+  const resalt = users2.filter(el => {
+    return el.username[0].toLocaleUpperCase() === 'S';
+  });
+  return resalt;
+}
+// console.log(user24());
 // 1. Відсортувати користувачів за віком (від молодшого до старшого).
+
+function userAgeMax() {
+  const resalt = users.toSorted((left, right) => {
+    return left.age - right.age;
+  });
+  return resalt;
+}
+// console.table(userAgeMax());
 // 1. Знайти всіх користувачів електронної пошти на домені yahoo.com.
+function usresWeb() {
+  const resalt = users2.filter(el => {
+    return el.website === 'yahoo.com';
+  });
+  return resalt;
+}
+// console.log(usresWeb());
 // 1. Знайти користувача з найменшим віком.
+function userMin() {
+  const ageMin = Math.min(
+    ...users.map(el => {
+      return el.age;
+    }),
+  );
+  const resalt = users.filter(el => {
+    return el.age === ageMin;
+  });
+  return resalt;
+}
+// console.log(userMin());
 // 1. Перевірити, чи є хоча б один користувач з ім'ям John.
+function usersSome() {
+  const resalt = users.some(el => {
+    return el.firstName === 'John';
+  });
+  return userSome();
+}
+// console.log(usersSome());
 // 1. Створити новий масив, що містить лише прізвища користувачів.
+function userName() {
+  let arr = [];
+  const resalt = users2.map(el => {
+    arr.push(el.username);
+  });
+  return arr;
+  return resalt;
+}
+// console.log(userName());
 // 1. Створити масив з інформацією про користувачів як рядкових описів.
+function userInfo() {
+  const info = users2.map(el => {
+    const infoJSON = JSON.stringify(el);
+    return infoJSON;
+  });
+  return info;
+}
+// console.log(userInfo());
 // 1. Знайти індекс користувача з активним статусом і віком більшим або рівним 40
 //    років.
+function userIdAge() {
+  const userId = users.findIndex(el => {
+    return el.isActive && el.age > 40;
+  });
+  return userId;
+}
+console.log(userIdAge());
